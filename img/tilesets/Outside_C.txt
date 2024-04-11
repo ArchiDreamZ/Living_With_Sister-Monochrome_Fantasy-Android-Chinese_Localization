@@ -1,0 +1,256 @@
+﻿Stone Pillar A|石の柱A
+Stone Pillar B|石の柱B
+Stone Pillar C|石の柱C
+Stone Pillar C (Moss)|石の柱C（苔）
+Stone Pillar C (Snow)|石の柱C（雪）
+Wood Pillar|木の柱
+Stone Pillar D|石の柱D
+Demon Castle Pillar|魔王城の柱
+Stone Pillar A|石の柱A
+Stone Pillar B|石の柱B
+Stone Pillar C|石の柱C
+Stone Pillar C (Moss)|石の柱C（苔）
+Stone Pillar C (Snow)|石の柱C（雪）
+Wood Pillar|木の柱
+Stone Pillar D|石の柱D
+Demon Castle Pillar|魔王城の柱
+Broken Stone Pillar|折れた石の柱A
+Broken Stone Pillar|折れた石の柱B
+Broken Stone Pillar|折れた石の柱C
+Broken Stone Pillar C (Moss)|折れた石の柱C（苔）
+Broken Stone Pillar C (Snow)|折れた石の柱C（雪）
+Broken Wood Pillar|折れた木の柱
+Broken Stone Pillar F|折れた石の柱D
+Broken Demon Castle Pillar|折れた魔王城の柱
+Bones A|骸骨A
+Bones B|骸骨B
+Rubble|瓦礫A
+Rubble B (Moss)|瓦礫B（苔）
+Rubble C (Snow)|瓦礫C（雪）
+Broken Wood Pillar|折れた木の柱
+Rubble D|瓦礫D
+Rubble E (Demon Castle)|瓦礫E（魔王城）
+Tapestry A|タペストリーA
+Tapestry A (Ruins)|タペストリーA（廃墟）
+Tapestry B|タペストリーB
+Tapestry B (Ruins)|タペストリーB（廃墟）
+Tapestry C|タペストリーC
+Tapestry C (Ruins)|タペストリーC（廃墟）
+Tapestry D|タペストリーD
+Tapestry D (Ruins)|タペストリーD（廃墟）
+Tapestry A|タペストリーA
+Tapestry A (Ruins)|タペストリーA（廃墟）
+Tapestry B|タペストリーB
+Tapestry B (Ruins)|タペストリーB（廃墟）
+Tapestry C|タペストリーC
+Tapestry C (Ruins)|タペストリーC（廃墟）
+Tapestry D|タペストリーD
+Tapestry D (Ruins)|タペストリーD（廃墟）
+Monument A|石碑A
+Monument B|石碑B
+Large Monument|大きな石碑
+Large Monument|大きな石碑
+Large Monument|大きな石碑
+Large Monument (Lit)|大きな石碑（光）
+Large Monument (Lit)|大きな石碑（光）
+Large Monument (Lit)|大きな石碑（光）
+Monument A|石碑A
+Monument C|石碑C
+Large Monument|大きな石碑
+Large Monument|大きな石碑
+Large Monument|大きな石碑
+Large Monument (Lit)|大きな石碑（光）
+Large Monument (Lit)|大きな石碑（光）
+Large Monument (Lit)|大きな石碑（光）
+Monument A (Snow)|石碑A（雪）
+Monument B (Snow)|石碑B（雪）
+Large Monument (Snow)|大きな石碑（雪）
+Large Monument (Snow)|大きな石碑（雪）
+Large Monument (Snow)|大きな石碑（雪）
+Large Monument (Ruins)|大きな石碑（廃墟）
+Large Monument (Ruins)|大きな石碑（廃墟）
+Large Monument (Ruins)|大きな石碑（廃墟）
+Monument A (Snow)|石碑A（雪）
+Monument B (Snow)|石碑B（雪）
+Large Monument (Snow)|大きな石碑（雪）
+Large Monument (Snow)|大きな石碑（雪）
+Large Monument (Snow)|大きな石碑（雪）
+Large Monument (Ruins)|大きな石碑（廃墟）
+Large Monument (Ruins)|大きな石碑（廃墟）
+Large Monument (Ruins)|大きな石碑（廃墟）
+Statue A|石像A
+Angel Statue A|天使像A
+Angel Statue B|天使像B
+Demon Statue|悪魔像
+Dais|台座
+Dragon Statue|竜像
+Dragon Statue|竜像
+Statue B|石像B
+Statue A|石像A
+Angel Statue A|天使像A
+Angel Statue B|天使像B
+Demon Statue|悪魔像
+Dais|台座
+Dragon Statue|竜像
+Dragon Statue|竜像
+Statue B|石像B
+Statue A (Snow)|石像A（雪）
+Angel Statue A (Snow)|天使像A（雪）
+Angel Statue B (Snow)|天使像B（雪）
+Demon Statue (Snow)|悪魔像（雪）
+Dais (Snow)|台座（雪）
+Dragon Statue (Snow)|竜像（雪）
+Dragon Statue (Snow)|竜像（雪）
+Ice Statue|氷像
+Statue A (Snow)|石像A（雪）
+Angel Statue A (Snow)|天使像A（雪）
+Angel Statue B (Snow)|天使像B（雪）
+Demon Statue (Snow)|悪魔像（雪）
+Dais (Snow)|台座（雪）
+Dragon Statue (Snow)|竜像（雪）
+Dragon Statue (Snow)|竜像（雪）
+Ice Statue|氷像
+Window A (Demon Castle)|窓A（魔王城）
+Window B (Demon Castle)|窓B（魔王城）
+Window C (Demon Castle)|窓C（魔王城）
+Gravel Mound (Dirt)|土砂A（土）
+Large Gravel Mound (Dirt)|大きな土砂（土）
+Large Gravel Mound (Dirt)|大きな土砂（土）
+Cave Entrance|洞窟入口
+Mine Entrance|坑道入口
+Window A (Demon Castle)|窓A（魔王城）
+Window B (Demon Castle)|窓B（魔王城）
+Window D (Demon Castle)|窓D（魔王城）
+Gravel Mound B (Dirt, Snow)|土砂B（土・雪）
+Large Gravel Mound (Dirt)|大きな土砂（土）
+Large Gravel Mound (Dirt)|大きな土砂（土）
+Cave Entrance|洞窟入口
+Mine Entrance|坑道入口
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof B (Snow)|屋根B（雪）
+Roof B (Snow)|屋根B（雪）
+Roof B (Snow)|屋根B（雪）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof B (Snow)|屋根B（雪）
+Roof B (Snow)|屋根B（雪）
+Roof B (Snow)|屋根B（雪）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof A (Red Tile)|屋根A（赤瓦）
+Roof B (Snow)|屋根B（雪）
+Roof B (Snow)|屋根B（雪）
+Roof B (Snow)|屋根B（雪）
+Roof B (Snow)|屋根B（雪）
+Roof B (Snow)|屋根B（雪）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof B (Snow)|屋根B（雪）
+Roof B (Snow)|屋根B（雪）
+Roof D (Wood)|屋根D（木造）
+Roof D (Wood)|屋根D（木造）
+Roof D (Wood)|屋根D（木造）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof D (Wood)|屋根D（木造）
+Roof D (Wood)|屋根D（木造）
+Roof D (Wood)|屋根D（木造）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof D (Wood)|屋根D（木造）
+Roof D (Wood)|屋根D（木造）
+Roof D (Wood)|屋根D（木造）
+Round Tower A (Castle)|円塔A（城）
+Round Tower A (Castle)|円塔A（城）
+Roof Detail A (Red Tile)|屋根飾りA（赤瓦）
+Roof Detail B (Snow)|屋根飾りB（雪）
+Roof D (Wood)|屋根D（木造）
+Roof D (Wood)|屋根D（木造）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower A (Castle)|円塔A（城）
+Round Tower A (Castle)|円塔A（城）
+Roof Detail C (Indigo Tile)|屋根飾りC（藍瓦）
+Roof Detail D (Wood)|屋根飾りD（木造）
+Roof D (Wood)|屋根D（木造）
+Roof D (Wood)|屋根D（木造）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower A (Castle)|円塔A（城）
+Round Tower A (Castle)|円塔A（城）
+Round Tower A (Castle's Spire)|円塔A（城の尖塔）
+Round Tower A (Castle's Spire)|円塔A（城の尖塔）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower A (Castle)|円塔A（城）
+Round Tower A (Castle)|円塔A（城）
+Round Tower A (Castle's Spire)|円塔A（城の尖塔）
+Round Tower A (Castle's Spire)|円塔A（城の尖塔）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower A (Castle)|円塔A（城）
+Round Tower A (Castle)|円塔A（城）
+Round Tower A (Castle's Spire)|円塔A（城の尖塔）
+Round Tower A (Castle's Spire)|円塔A（城の尖塔）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower B (Fort)|円塔B（砦）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle)|円塔A（城）
+Round Tower A (Castle)|円塔A（城）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle's Spire, Snow)|円塔A（城の尖塔・雪）
+Round Tower A (Castle's Spire, Snow)|円塔A（城の尖塔・雪）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle's Spire, Snow)|円塔A（城の尖塔・雪）
+Round Tower A (Castle's Spire, Snow)|円塔A（城の尖塔・雪）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle's Spire, Snow)|円塔A（城の尖塔・雪）
+Round Tower A (Castle's Spire, Snow)|円塔A（城の尖塔・雪）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower C (Demon Castle)|円塔C（魔王城）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower A (Castle, Snow)|円塔A（城・雪）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）
+Round Tower B (Fort, Snow)|円塔B（砦・雪）

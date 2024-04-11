@@ -1,0 +1,256 @@
+﻿Transparent|透明
+Stairs A (Up)|階段A（上り）
+Stairs B (Up)|階段B（上り）
+Stairs C (Up)|階段C（上り）
+Stairs D (Up)|階段D（上り）
+Metal Ladder|鉄ばしご
+Rope Ladder|縄ばしご
+Rope|ロープ
+Hole|穴
+Stairs A (Down)|階段A（下り）
+Stairs B (Down)|階段B（下り）
+Stairs C (Down)|階段C（下り）
+Stairs D (Down)|階段D（下り）
+Metal Ladder|鉄ばしご
+Rope Ladder|縄ばしご
+Rope|ロープ
+Middle Window A|中型窓A
+Middle Window B|中型窓B
+Middle Window C|中型窓C
+Middle Window D (Ruins)|中型窓D（廃墟）
+Window (Demon Castle)|窓（魔王城）
+Metal Ladder|鉄ばしご
+Rope Ladder|縄ばしご
+Rope|ロープ
+Middle Window A|中型窓A
+Middle Window B|中型窓B
+Middle Window C|中型窓C
+Middle Window D (Ruins)|中型窓D（廃墟）
+Window (Demon Castle)|窓（魔王城）
+Hole A (Metal Ladder)|穴A（鉄ばしご）
+Hole B (Rope Ladder)|穴B（縄ばしご）
+Hole C (Rope)|穴C（ロープ）
+Large Window A|大型窓A
+Large Window B|大型窓B
+Large Window C|大型窓C
+Stained Glass Window|ステンドグラス
+Large Window D|大型窓D
+Window A|窓A
+Window B|窓B
+Window C|窓C
+Large Window A|大型窓A
+Large Window B|大型窓B
+Large Window C|大型窓C
+Stained Glass Window|ステンドグラス
+Large Window D|大型窓D
+Window A|窓A
+Window B|窓B
+Window C|窓C
+Chest A|チェストA
+Cabinet|キャビネット
+Closet|クローゼット
+Chest of Drawers|タンス
+Dish Cabinet|食器棚
+Wine Rack|ワインセラー
+Bottle Shelf A|ボトル棚A
+Bottle Shelf B|ボトル棚B
+Chest B|チェストB
+Chest C|チェストC
+Closet|クローゼット
+Chest of Drawers|タンス
+Dish Cabinet|食器棚
+Wine Rack|ワインセラー
+Bottle Shelf A|ボトル棚A
+Bottle Shelf B|ボトル棚B
+Bread Shelf|パン棚
+Sundries Shelf A|雑貨棚A
+Sundries Shelf A|雑貨棚A
+Sundries Shelf B|雑貨棚B
+Medicine Shelf|薬品棚
+Bookshelf A|本棚A
+Bookshelf B|本棚B
+Bookshelf B|本棚B
+Bread Shelf|パン棚
+Sundries Shelf A|雑貨棚A
+Sundries Shelf A|雑貨棚A
+Sundries Shelf B|雑貨棚B
+Medicine Shelf|薬品棚
+Bookshelf A|本棚A
+Bookshelf B|本棚B
+Bookshelf B|本棚B
+Bed|ベッド
+Large Bed|ダブルベッド
+Large Bed|ダブルベッド
+Cheap Bed A|粗末なベッドA
+Cheap Bed B|粗末なベッドB
+Straw Bed|むしろの寝床
+Bed (Ruins)|ベッド（廃墟）
+Tipped Shelf|倒れた棚
+Bed|ベッド
+Large Bed|ダブルベッド
+Large Bed|ダブルベッド
+Cheap Bed A|粗末なベッドA
+Cheap Bed B|粗末なベッドB
+Straw Bed|むしろの寝床
+Bed (Ruins)|ベッド（廃墟）
+Tipped Shelf|倒れた棚
+Table A|テーブルA
+Table B|テーブルB
+Table C|テーブルC
+Fortuneteller's Table A|占い台A
+Mini Table A|ミニテーブルA
+Piano|ピアノ
+Piano|ピアノ
+Piano|ピアノ
+Stool A|椅子A
+Stool B|椅子B
+Stool C|椅子C
+Fortuneteller's Table B (Crystal)|占い台B（水晶）
+Mini Table B (Flower)|ミニテーブルB（花瓶）
+Piano|ピアノ
+Piano|ピアノ
+Piano|ピアノ
+Oven|かまど
+Sink|流し
+Kitchen Counter A|調理台A
+Kitchen Counter B|調理台B
+Dresser|ドレッサー
+Pipe Organ|パイプオルガン
+Pipe Organ|パイプオルガン
+Pipe Organ|パイプオルガン
+Simple Shelf A|簡易棚A
+Simple Shelf B (Jars)|簡易棚B（瓶）
+Simple Shelf C (Books)|簡易棚C（本）
+Simple Shelf D (Sacks)|簡易棚D（袋）
+Simple Shelf E (Bottles)|簡易棚E（ボトル）
+Pipe Organ|パイプオルガン
+Pipe Organ|パイプオルガン
+Pipe Organ|パイプオルガン
+Large Fireplace|大きな暖炉
+Large Fireplace|大きな暖炉
+Large Fireplace|大きな暖炉
+Fireplace A (Stone)|暖炉A（石）
+Fireplace B (Brick)|暖炉B（レンガ）
+Fireplace C (Iron)|暖炉C（鉄）
+Tapestry A|タペストリーA
+Tapestry A (Ruins)|タペストリーA（廃墟）
+Large Fireplace|大きな暖炉
+Large Fireplace|大きな暖炉
+Large Fireplace|大きな暖炉
+Fireplace A (Stone)|暖炉A（石）
+Fireplace B (Brick)|暖炉B（レンガ）
+Fireplace C (Iron)|暖炉C（鉄）
+Tapestry A|タペストリーA
+Tapestry A (Ruins)|タペストリーA（廃墟）
+Curtains A|カーテンA
+Curtains B|カーテンB
+Curtains C|カーテンC
+Curtains D|カーテンD
+Curtains A (Ruins)|カーテンA（廃墟）
+Curtains B (Ruins)|カーテンB（廃墟）
+Curtains C (Ruins)|カーテンC（廃墟）
+Curtains D (Ruins)|カーテンD（廃墟）
+Curtains A|カーテンA
+Curtains B|カーテンB
+Curtains C|カーテンC
+Curtains D|カーテンD
+Curtains A (Ruins)|カーテンA（廃墟）
+Curtains B (Ruins)|カーテンB（廃墟）
+Curtains C (Ruins)|カーテンC（廃墟）
+Curtains D (Ruins)|カーテンD（廃墟）
+Clock|時計
+Mirror|鏡
+Posted Notice|貼り紙
+Posted Notice (Ruins)|貼り紙（廃墟）
+World Map|世界地図
+World Map|世界地図
+Painting|絵画
+Painting|絵画
+Clock|時計
+Mirror|鏡
+Stone Tablet|石版
+Stone Tablet (Ruins)|石版（廃墟）
+Portrait A|肖像画A
+Portrait B|肖像画B
+Painting A|絵画A
+Painting B|絵画B
+Chair A (Wood)|背もたれ椅子A（木製）
+Chair B (Stone)|背もたれ椅子B（石）
+Throne A|玉座A
+Throne A|玉座A
+Throne A|玉座A
+Throne B (Demon Castle)|玉座B（魔王城）
+Throne B (Demon Castle)|玉座B（魔王城）
+Throne B (Demon Castle)|玉座B（魔王城）
+Chair A (Wood)|背もたれ椅子A（木製）
+Chair B (Stone)|背もたれ椅子B（石）
+Throne A|玉座A
+Throne A|玉座A
+Throne A|玉座A
+Throne B (Demon Castle)|玉座B（魔王城）
+Throne B (Demon Castle)|玉座B（魔王城）
+Throne B (Demon Castle)|玉座B（魔王城）
+Shield|盾
+Swords A|剣A
+Swords B|剣B
+Entrance A|入口A
+Entrance A (Extend)|入口A（延長部分）
+Entrance A (Top Half A)|入口A（上半分A）S
+Entrance B|入口B
+Entrance A (Top Half B)|入口A（上半分B）
+Pot A|壺A
+Pot B|壺B
+Pot C (Ruins)|壺C（廃墟）
+Table A (Ruins)|テーブルA（廃墟）
+Stone Pillar A|石の柱A
+Stone Pillar B|石の柱B
+Fort Pillar|砦の柱
+Rubble|瓦礫
+Basin|桶
+Barrel |樽
+Barrel (Ruins)|樽（廃墟）
+Stool (Ruins)|椅子（廃墟）
+Stone Pillar A|石の柱A
+Stone Pillar B|石の柱B
+Fort Pillar|砦の柱
+Rubble|瓦礫
+Basin|桶
+Tub A|たらいA
+Tub B|たらいB
+Crate A (Ruins)|木箱A（廃墟）
+Broken Stone Pillar A|折れた石の柱A
+Broken Stone Pillar B|折れた石の柱B
+Broken Fort Pillar|折れた砦の柱
+Scrap Wood|端材
+Crate B|木箱B
+Crate C|木箱C
+Stacked Crates|積まれた木箱
+Stacked Crates|積まれた木箱
+Fissures A|亀裂A
+Fissures B|亀裂B
+Fissures C|亀裂C
+Fissures D|亀裂D
+Crate D|木箱D
+Crate E|木箱E
+Stacked Crates|積まれた木箱
+Stacked Crates|積まれた木箱
+Fissures A|亀裂A
+Fissures B|亀裂B
+Fissures C|亀裂C
+Fissures D|亀裂D
+Crate F|木箱F
+Crate G|木箱G
+Sacks C|麻袋C
+Large Crate|大きな木箱
+Jail Bar|鉄格子
+Jail Bar|鉄格子
+Jail Bar|鉄格子
+Jail Bar|鉄格子
+Sack A|麻袋A
+Sack B|麻袋B
+Sacks C|麻袋C
+Large Crate|大きな木箱
+Jail Bar|鉄格子
+Jail Bar|鉄格子
+Jail Bar|鉄格子
+Jail Bar|鉄格子

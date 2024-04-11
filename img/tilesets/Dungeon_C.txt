@@ -1,0 +1,256 @@
+﻿Decorative Pillar A (Stone)|装飾柱A（石）
+Decorative Pillar B (Stone)|装飾柱B（石）
+Decorative Pillar C (Temple)|装飾柱C（遺跡）
+Decorative Pillar D (Rock Cave)|装飾柱D（岩洞窟）
+Decorative Pillar E (Demon Castle)|装飾柱E（魔王城）
+Decorative Pillar F (Fort)|装飾柱F（砦）
+Decorative Pillar G (Dirt Cave)|装飾柱G（土洞窟）
+Decorative Pillar H (Factory)|装飾柱H（工場）
+Decorative Pillar A (Stone)|装飾柱A（石）
+Decorative Pillar B (Stone)|装飾柱B（石）
+Decorative Pillar C (Temple)|装飾柱C（遺跡）
+Decorative Pillar D (Rock Cave)|装飾柱D（岩洞窟）
+Decorative Pillar E (Demon Castle)|装飾柱E（魔王城）
+Decorative Pillar F (Fort)|装飾柱F（砦）
+Decorative Pillar G (Dirt Cave)|装飾柱G（土洞窟）
+Decorative Pillar H (Factory)|装飾柱H（工場）
+Decorative Pillar A (Stone)|装飾柱A（石）
+Decorative Pillar B (Stone)|装飾柱B（石）
+Decorative Pillar C (Temple)|装飾柱C（遺跡）
+Decorative Pillar D (Rock Cave)|装飾柱D（岩洞窟）
+Decorative Pillar E (Demon Castle)|装飾柱E（魔王城）
+Decorative Pillar F (Fort)|装飾柱F（砦）
+Decorative Pillar G (Dirt Cave)|装飾柱G（土洞窟）
+Decorative Pillar H (Factory)|装飾柱H（工場）
+Decorative Pillar A (Stone, Ruins)|装飾柱A（石・廃墟）
+Decorative Pillar B (Stone, Ruins)|装飾柱B（石・廃墟）
+Decorative Pillar C (Temple, Ruins)|装飾柱C（遺跡・廃墟）
+Decorative Pillar D (Rock Cave, Ruins)|装飾柱D（岩洞窟・廃墟）
+Decorative Pillar E (Demon Castle, Ruins)|装飾柱E（魔王城・廃墟）
+Decorative Pillar F (Fort, Ruins)|装飾柱F（砦・廃墟）
+Decorative Pillar G (Dirt Cave, Ruins)|装飾柱G（土洞窟・廃墟）
+Decorative Pillar A (Stone, Front, Ruins)|装飾柱A（石・手前・廃墟）
+Decorative Pillar A (Stone, Ruins)|装飾柱A（石・廃墟）
+Decorative Pillar B (Stone, Ruins)|装飾柱B（石・廃墟）
+Decorative Pillar C (Temple, Ruins)|装飾柱C（遺跡・廃墟）
+Decorative Pillar D (Rock Cave, Ruins)|装飾柱D（岩洞窟・廃墟）
+Decorative Pillar E (Demon Castle, Ruins)|装飾柱E（魔王城・廃墟）
+Decorative Pillar F (Fort, Ruins)|装飾柱F（砦・廃墟）
+Decorative Pillar G (Dirt Cave, Ruins)|装飾柱G（土洞窟・廃墟）
+Decorative Pillar D (Rock Cave, Front, Ruins)|装飾柱F（岩洞窟・手前・廃墟）
+Decorative Pillar A (Stone, Ruins)|装飾柱A（石・廃墟）
+Decorative Pillar B (Stone, Ruins)|装飾柱B（石・廃墟）
+Decorative Pillar C (Temple, Ruins)|装飾柱C（遺跡・廃墟）
+Decorative Pillar D (Rock Cave, Ruins)|装飾柱D（岩洞窟・廃墟）
+Decorative Pillar E (Demon Castle, Ruins)|装飾柱E（魔王城・廃墟）
+Decorative Pillar F (Fort, Ruins)|装飾柱F（砦・廃墟）
+Decorative Pillar G (Dirt Cave, Ruins)|装飾柱G（土洞窟・廃墟）
+Decorative Pillar F (Fort, Front, Ruins)|装飾柱F（砦・手前・廃墟）
+Decorative Pillar A (Stone, Front)|装飾柱A（石・手前）
+Decorative Pillar B (Stone, Front)|装飾柱B（石・手前）
+Decorative Pillar C (Temple, Front)|装飾柱C（神殿・手前）
+Decorative Pillar D (Rock Cave, Front)|装飾柱D（岩洞窟・手前）
+Decorative Pillar E (Demon Castle, Front)|装飾柱E（魔王城・手前）
+Decorative Pillar F (Fort, Front)|装飾柱F（砦・手前）
+Decorative Pillar G (Dirt Cave, Front)|装飾柱G（土洞窟・手前）
+Decorative Pillar H (Factory, Front)|装飾柱H（工場・手前）
+Gate A|門A
+Gate A|門A
+Gate A|門A
+Gate B|門B
+Gate B|門B
+Gate B|門B
+Decorative Pillar I (Demonic)|装飾柱I（悪魔）
+Decorative Pillar I (Demonic, Ruins)|装飾柱I（悪魔・廃墟）
+Gate A|門A
+Gate A|門A
+Gate A|門A
+Gate B|門B
+Gate B|門B
+Gate B|門B
+Decorative Pillar I (Demonic)|装飾柱I（悪魔）
+Decorative Pillar I (Demonic, Ruins)|装飾柱I（悪魔・廃墟）
+Gate A|門A
+Gate A|門A
+Gate A|門A
+Gate B|門B
+Gate B|門B
+Gate B|門B
+Coffin A (Right)|棺A（右）
+Coffin A (Right)|棺A（右）
+Hexagram|魔法陣
+Hexagram|魔法陣
+Hexagram|魔法陣
+Hexagram (Lit)|魔法陣（光）
+Hexagram (Lit)|魔法陣（光）
+Hexagram (Lit)|魔法陣（光）
+Coffin B (Top)|棺B（上）
+Coffin C (Bottom)|棺C（下）
+Hexagram|魔法陣
+Hexagram|魔法陣
+Hexagram|魔法陣
+Hexagram (Lit)|魔法陣（光）
+Hexagram (Lit)|魔法陣（光）
+Hexagram (Lit)|魔法陣（光）
+Coffin B (Top)|棺B（上）
+Coffin C (Bottom)|棺C（下）
+Hexagram|魔法陣
+Hexagram|魔法陣
+Hexagram|魔法陣
+Hexagram (Lit)|魔法陣（光）
+Hexagram (Lit)|魔法陣（光）
+Hexagram (Lit)|魔法陣（光）
+Coffin D  (Left)|棺D（左）
+Coffin D  (Left)|棺D（左）
+Rails|線路
+Rails|線路
+Rails|線路
+Rails|線路
+Rails (Ruins)|線路（廃墟）
+Rails (Ruins)|線路（廃墟）
+Rails (Ruins)|線路（廃墟）
+Rails (Ruins)|線路（廃墟）
+Rails|線路
+Railroad Ties A|枕木A
+Rails|線路
+Rails|線路
+Rails|線路
+Rails|線路
+Rails|線路
+Rails|線路
+Rails|線路
+Railroad Ties B|枕木B
+Rails|線路
+Rails|線路
+Rails|線路
+Rails|線路
+Rails|線路
+Rails|線路
+Mural A|壁画A
+Hieroglyph|ヒエログリフ
+Hieroglyph|ヒエログリフ
+Large Mural A|大きな壁画A
+Large Mural A|大きな壁画A
+Large Mural A|大きな壁画A
+Bed|ベッド
+Bed (Ruins)|ベッド（廃墟）
+Mural B|壁画B
+Hieroglyph|ヒエログリフ
+Hieroglyph|ヒエログリフ
+Large Mural B|大きな壁画B
+Large Mural B|大きな壁画B
+Large Mural B|大きな壁画B
+Bed|ベッド
+Bed (Ruins)|ベッド（廃墟）
+Middle Window A|中型窓A
+Middle Window B|中型窓B
+Middle Window C|中型窓C
+Middle Window D (Ruins)|中型窓窓D（廃墟）
+Window (Demon Castle)|窓（魔王城）
+Table|テーブル
+Cheap Bed|粗末なベッド
+Straw Bed|むしろの寝床
+Middle Window A|中型窓A
+Middle Window B|中型窓B
+Middle Window C|中型窓C
+Middle Window D (Ruins)|中型窓窓D（廃墟）
+Window (Demon Castle)|窓（魔王城）
+Stool|椅子
+Cheap Bed|粗末なベッド
+Straw Bed|むしろの寝床
+Large Window A|大型窓A
+Large Window B|大型窓B
+Large Window C|大型窓C
+Stained Glass Window|ステンドグラス
+Large Window D|大型窓D
+Window A|窓A
+Window B|窓B
+Window C|窓C
+Large Window A|大型窓A
+Large Window B|大型窓B
+Large Window C|大型窓C
+Stained Glass Window|ステンドグラス
+Large Window D|大型窓D
+Window A|窓A
+Window B|窓B
+Window C|窓C
+Chest A|チェストA
+Cabinet|キャビネット
+Closet|クローゼット
+Chest of Drawers|タンス
+Dish Cabinet|食器棚
+Wine Rack|ワインセラー
+Bottle Shelf A|ボトル棚A
+Bottle Shelf B|ボトル棚B
+Chest B|チェストB
+Chest C|チェストC
+Closet|クローゼット
+Chest of Drawers|タンス
+Dish Cabinet|食器棚
+Wine Rack|ワインセラー
+Bottle Shelf A|ボトル棚A
+Bottle Shelf B|ボトル棚B
+Tipped Shelf|倒れた棚
+Sundries Shelf A|雑貨棚A
+Sundries Shelf A|雑貨棚A
+Sundries Shelf B|雑貨棚B
+Medicine Shelf|薬品棚
+Bookshelf A|本棚A
+Bookshelf B|本棚B
+Bookshelf B|本棚B
+Tipped Shelf|倒れた棚
+Sundries Shelf A|雑貨棚A
+Sundries Shelf A|雑貨棚A
+Sundries Shelf B|雑貨棚B
+Medicine Shelf|薬品棚
+Bookshelf A|本棚A
+Bookshelf B|本棚B
+Bookshelf B|本棚B
+Curtains A|カーテンA
+Curtains B|カーテンB
+Curtains C|カーテンC
+Curtains D|カーテンD
+Curtains A (Ruins)|カーテンA（廃墟）
+Curtains B (Ruins)|カーテンB（廃墟）
+Curtains C (Ruins)|カーテンC（廃墟）
+Curtains D (Ruins)|カーテンD（廃墟）
+Curtains A|カーテンA
+Curtains B|カーテンB
+Curtains C|カーテンC
+Curtains D|カーテンD
+Curtains A (Ruins)|カーテンA（廃墟）
+Curtains B (Ruins)|カーテンB（廃墟）
+Curtains C (Ruins)|カーテンC（廃墟）
+Curtains D (Ruins)|カーテンD（廃墟）
+Clock|時計
+Mirror|鏡
+Clock (Ruins)|時計（廃墟）
+Mirror (Ruins)|鏡（廃墟）
+Stacked Crates|積まれた木箱
+Stacked Crates|積まれた木箱
+Tapestry A|タペストリーA
+Tapestry  A (Ruins)|タペストリーA（廃墟）
+Clock|時計
+Mirror|鏡
+Clock (Ruins)|時計（廃墟）
+Mirror (Ruins)|鏡（廃墟）
+Stacked Crates|積まれた木箱
+Stacked Crates|積まれた木箱
+Tapestry A|タペストリーA
+Tapestry  A (Ruins)|タペストリーA（廃墟）
+Chair A (Wood)|背もたれ椅子A（木製）
+Chair B (Stone)|背もたれ椅子B（石）
+Throne A|玉座A
+Throne A|玉座A
+Throne A|玉座A
+Throne B (Demon Castle)|玉座B（魔王城）
+Throne B (Demon Castle)|玉座B（魔王城）
+Throne B (Demon Castle)|玉座B（魔王城）
+Chair A (Wood)|背もたれ椅子A（木製）
+Chair B (Stone)|背もたれ椅子B（石）
+Throne A|玉座A
+Throne A|玉座A
+Throne A|玉座A
+Throne B (Demon Castle)|玉座B（魔王城）
+Throne B (Demon Castle)|玉座B（魔王城）
+Throne B (Demon Castle)|玉座B（魔王城）

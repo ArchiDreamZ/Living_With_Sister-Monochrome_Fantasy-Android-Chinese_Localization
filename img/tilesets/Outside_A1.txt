@@ -1,0 +1,16 @@
+﻿Water A (Meadow)|水場A（草地）
+Deep Water|深い水場
+Lotus Pads|蓮の葉
+Swamp Grass|水草
+Water B (Snow)|水場B（雪）
+Waterfall A (Stone Wall)|滝A（石壁）
+Canal|水路
+Waterfall B (Dirt Wall)|滝B（土壁）
+Water C (Dirt)|水場C（土）
+Waterfall C (Cliff)|滝C（崖）
+Water D (Sand)|水場 D（砂）
+Waterfall D (Boulder)|滝D（玉石）
+Water E (Port)|水場E（港）
+Waterfall E (Stone Wall)|滝E（石壁）
+Poison Swamp|毒の沼
+Dead Tree|枯れ木
