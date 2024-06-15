@@ -4,7 +4,9 @@
 
 在Steam上架之前，该游戏原发布于DLsite，曾被翻译为“妹同居黑白2异世界幻想”，或“妹同居生活2异世界幻想”，英文名为“Imouto Life Fantasy”
 
-该游戏由日本的HBOX公司重写移植到了RPG Maker MV引擎上，这引擎可以跨平台，从而可以用于安卓平台上，并可以用JoiPlay加载，妹同居1代同样由该公司移植。而国内的“巴图勇士”、“滑稽酱”等移植版皆是由该HBOX公司的日文原版破解并汉化而成。
+该游戏官方授权由日本的HBOX公司重写移植到了RPG Maker MV引擎上，这引擎可以跨平台，从而可以用于安卓平台上，并可以用JoiPlay加载，妹同居1代同样由该公司移植。而其他所有版本，例如国内的“巴图勇士”、“滑稽酱”等移植版皆是由该HBOX公司的日文原版破解并汉化而成。
+
+该游戏于24年6月13日在DLsite发布更新DLC，这是妹相随的最后一次内容更新。Steam版将会在修复bug并翻译后跟进更新DLC，而手机版由于引擎不同，正在由HBOX缓慢移植中。
 
 **最新版本信息**
 
@@ -97,6 +99,14 @@ RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“m
 **存档功能：**
 
 游戏内第一个存档位是自动保存栏位，会被自动保存给覆盖，请使用第二个之后的存档位。
+
+## 遇到Bug
+如果你遇到了bug或者游戏出了问题，可以通过回退到旧版来排除问题的成因：
+我发布了“[巴图汉化&彼梦微修版](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/releases/tag/1.1)” 和“[日文原版](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/releases/tag/1.0)” 的可覆盖安装版，可以直接与彼梦精翻版相互覆盖安装，存档会保留住，无需卸载软件重装。
+这样遇到bug或问题时，覆盖安装旧版，然后看问题是否依然存在，就知道是我导致的问题，还是原本就有的问题。
+
+## 作弊
+作弊功能可以令测试变得更为方便，能够加快进度。但我目前并没有时间研究制作一个作弊功能，因此我想到可以借用巴图版的作弊功能。通过回退到“[巴图汉化&彼梦微修版](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/releases/tag/1.1)” 来作弊，改完数据后再把新版覆盖安装回来就行了。
 
 ## 卡顿问题
 游戏卡顿是RPG Maker引擎的通病，体现为玩一段时间就变卡，图片素材越多卡的越快，推测为该引擎无法正常清理图片缓存。运行内存越多，卡顿现象越轻。
