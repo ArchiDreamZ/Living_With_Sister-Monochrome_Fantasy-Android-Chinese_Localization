@@ -2860,24 +2860,24 @@ Window_SavefileList.prototype.drawGameTitle = function(info, x, y, width) {
 		}else{
 			this.drawText('HARD', x, y, 100);
 		}
-		var str = info.keikanissu + '日目　';
+		var str = info.keikanissu + '日　';
 		if(info.youbi == 0){
-            str += '月曜　';
+            str += '星期一　';
         }else if(info.youbi == 1){
-            str += '火曜　';
+            str += '星期二　';
         }else if(info.youbi == 2){
-            str += '水曜　';
+            str += '星期三　';
         }else if(info.youbi == 3){
-            str += '木曜　';
+            str += '星期四　';
         }else if(info.youbi == 4){
-            str += '金曜　';
+            str += '星期五　';
         }else if(info.youbi == 5){
-            str += '土曜　';
+            str += '星期六　';
         }else if(info.youbi == 6){
-            str += '日曜　';
+            str += '星期天　';
         }
 
-        str += info.jikan + '時　' + info.katagaki;
+        str += info.jikan + '时　' + info.katagaki;
 
 		this.drawText(str, x, y + 50, width);
     }
