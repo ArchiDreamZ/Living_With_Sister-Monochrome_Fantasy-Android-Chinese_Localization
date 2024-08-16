@@ -165,8 +165,8 @@
         this.hideFps();
         this._setErrorPrinterStyle();
         if (this._errorPrinter) {
-            //this._makeMainMessage();
-            //if (paramHyperLink)    this._makeHyperLink();
+            this._makeMainMessage();
+            if (paramHyperLink)    this._makeHyperLink();
             if (paramOutputDetail) {
                 var stack = String(e.stack) || '';
                 if (Utils.isNwjs()) {
@@ -176,47 +176,6 @@
                 this._makeStackTrace(stack);
             }
         }
-
-        stack = stack.replace(/\r?\n/g,"");
-
-        var mobinfo = navigator.userAgent;
-        var url = "http://hbox.jp/appdata/cloud_save/rpgmaker_errlog.php?contentid=" + contentId + "&log=" + setdmessage + " " + stack + "&mobileinfo=" + mobinfo + "&dt=" + sendDate + "&tm=" + sendTime;
-        var xhr = new XMLHttpRequest();
-		xhr.open('POST', url);
-		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xhr.overrideMimeType('text/plain');
-		xhr.timeout = 5000;
-		//
-		xhr.ontimeout = function(e){
-			//タイムアウト
-			//$gameVariables.setValue(vID, "ERROR TIMEOUT");
-			console.log("ERROR TIMEOUT");
-		};
-		xhr.onabort = function(e){
-			//通信中止
-			//$gameVariables.setValue(vID, "ERROR ABORT");
-			console.log("ERROR ABORT");
-		};
-		xhr.onerror = function() {
-			//なんやかんやエラー
-			//$gameVariables.setValue(vID, "ERROR");
-			console.log("ERROR");
-		};
-		xhr.onload = function() {
-			if (xhr.status < 400) {
-				//受信成功
-				console.log(xhr.responseText);
-				//$gameVariables.setValue(vID, xhr.responseText);
-			} else {
-				//サーバー側エラー応答
-				//$gameVariables.setValue(vID, "ERROR RESPONSE");
-				console.log("ERROR RESPONSE");
-			}
-		};
-
-		//送信
-		xhr.send("");
-
     };
 
     Graphics._makeMainMessage = function() {

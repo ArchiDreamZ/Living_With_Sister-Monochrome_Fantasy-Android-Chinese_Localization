@@ -30,7 +30,5 @@ var $plugins =
 {"name":"MadeWithMv","status":true,"description":"メイン画面へ進む前に、\"Made with MV\"のスプラッシュ画面もしくはカスタマイズされたスプラッシュ画面を表示します。","parameters":{"Show Made With MV":"true","Made with MV Image":"logo","Show Custom Splash":"true","Custom Image":"logo2","Fade Out Time":"30","Fade In Time":"30","Wait Time":"30"}},
 {"name":"DisableFastForward","status":true,"description":"イベント高速化禁止プラグイン","parameters":{}},
 {"name":"AltSaveScreen","status":true,"description":"セーブ／ロード画面のレイアウトを変更します。","parameters":{}},
-{"name":"ServerSave","status":false,"description":"セーブデータサーバー保存","parameters":{"contentId":"450801"}},
-{"name":"ServerSaveAPK","status":true,"description":"セーブデータサーバー保存","parameters":{"contentId":"450801"}},
 {"name":"UTA_CommonSave","status":true,"description":"共有のセーブデータを作成し、指定したスイッチ・変数の状態をセーブデータ間で共有します。","parameters":{"Target Switches":"","Target Variables":"1425-1441,1450-1463","Is Auto":"true","Auto on Gameover":"false","Show Trace":"false"}}
 ];

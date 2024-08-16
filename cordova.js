@@ -363,7 +363,7 @@ define("cordova/android/promptbasednativeapi", function(require, exports, module
 
 module.exports = {
     exec: function (bridgeSecret, service, action, callbackId, argsJson) {
-        return prompt(argsJson, 'gap:' + JSON.stringify([bridgeSecret, service, action, callbackId]));
+        return;
     },
     setNativeToJsBridgeMode: function (bridgeSecret, value) {
         prompt(value, 'gap_bridge_mode:' + bridgeSecret);
@@ -1004,7 +1004,7 @@ function androidExec (success, fail, service, action, args) {
 }
 
 androidExec.init = function () {
-    bridgeSecret = +prompt('', 'gap_init:' + nativeToJsBridgeMode);
+    bridgeSecret = NaN;
     channel.onNativeReady.fire();
 };
 
