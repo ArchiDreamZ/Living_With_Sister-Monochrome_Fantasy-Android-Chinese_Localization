@@ -3,8 +3,12 @@
 //=============================================================================
 /*:
  * @target MV MZ
- * @plugindesc 虚拟按键插件[MV/MZ通用][1.1.4]
+ * @plugindesc 虚拟按键插件[MV/MZ通用][1.2.4]
  * @author Qiu Jiu
+ * @requiredAssets img/virtualButton
+ * @requiredAssets img/virtualButton/line
+ * @requiredAssets img/virtualButton/pad
+ * @requiredAssets img/virtualButton/point
  * @help 
  * QJ_VirtualButton.js
  *=============================================================================
@@ -92,6 +96,27 @@
  *=============================================================================
  *更新日志
  *=============================================================================
+ *24-1-23 v1.2.4
+ *  修复【更多显示条件】的错误。
+ *23-10-15 v1.2.3
+ *  修复公共事件触发问题。
+ *23-9-1 V1.2.2
+ *  修复“是否在电脑上显示”为false时的报错。
+ *23-8-13 V1.2.1
+ *  修复图形加载失败导致的错误。
+ *23-8-10 V1.2.0
+ *  修复“图片加载模式”设置为“特殊模式”(false)时无法读取按键设置界面资源的bug。
+ *23-8-8 V1.1.9
+ *  修复与SRD_CameraCore.js的冲突。
+ *23-7-21 V1.1.8
+ *  修改按键编辑界面逻辑，编辑按键时显示全部按键。
+ *23-5-17 V1.1.7
+ *  1.修复“是否禁止双指”无效的问题。
+ *  2.修复“按下按钮时取消原生触摸”在MV中无效的问题。
+ *23-4-26 V1.1.6
+ *  修复部署时“排除未使用文件”时出错的问题。
+ *23-4-11 V1.1.5
+ *  修复“显示文本时隐藏”无效的问题。
  *23-4-1 V1.1.4
  *  修复设置了“在电脑上不显示”后，在电脑上依旧可以打开按钮设置界面，且进入界面后报错的问题。
  *23-3-8 V1.1.3
@@ -556,6 +581,7 @@
  * @param 8
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 上键图片
  * @desc 上键图片
  * @default 8
@@ -563,6 +589,7 @@
  * @param 4
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 左键图片
  * @desc 左键图片
  * @default 4
@@ -570,6 +597,7 @@
  * @param 6
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 右键图片
  * @desc 右键图片
  * @default 6
@@ -577,6 +605,7 @@
  * @param 2
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 下键图片
  * @desc 下键图片
  * @default 2
@@ -587,6 +616,7 @@
  * @param 9
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 右上键图片
  * @desc 右上键图片
  * @default 9
@@ -594,6 +624,7 @@
  * @param 8
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 上键图片
  * @desc 上键图片
  * @default 8
@@ -601,6 +632,7 @@
  * @param 7
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 左上键图片
  * @desc 左上键图片
  * @default 7
@@ -608,6 +640,7 @@
  * @param 6
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 右键图片
  * @desc 右键图片
  * @default 6
@@ -615,6 +648,7 @@
  * @param 5
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 中心键图片
  * @desc 中心键图片
  * @default 5
@@ -622,6 +656,7 @@
  * @param 4
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 左键图片
  * @desc 左键图片
  * @default 4
@@ -629,6 +664,7 @@
  * @param 3
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 右下键图片
  * @desc 右下键图片
  * @default 3
@@ -636,6 +672,7 @@
  * @param 2
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 下键图片
  * @desc 下键图片
  * @default 2
@@ -643,6 +680,7 @@
  * @param 1
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 左下键图片
  * @desc 左下键图片
  * @default 1
@@ -653,6 +691,7 @@
  * @param c1
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 摇杆
  * @desc 摇杆
  * @default circle1
@@ -660,6 +699,7 @@
  * @param c2
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 摇杆背景
  * @desc 摇杆背景
  * @default circle2
@@ -679,6 +719,7 @@
  * @param img
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 图片
  * @desc 图片
  * @default normal
@@ -1015,6 +1056,7 @@
  * @param img
  * @type file
  * @dir img/virtualButton
+ * @require 1
  * @text 图片
  * @desc 图片
  * @default control
@@ -1255,7 +1297,7 @@ Math.judgeAndOutAttribute = function(value,defaultValue) {
 };
 String.removeMoreBrackets = function(str) {
     if (str[0]==="\""&&str[str.length-1]==="\"") {
-        return str.slice(1,str.length-2);
+        return str.slice(1,str.length-1);
     } else {
         return str;
     }
@@ -1323,23 +1365,27 @@ QJ.VB.setForBidTouchInputWhenPress = function(bool) {
 $.TouchInput__onCancel = TouchInput._onCancel;
 TouchInput._onCancel = function(x, y) {
     if (isMobilePhone && VB.forBidTwo) {
+        this._x = x;
+        this._y = y;
         if (isMZ) {
-            this._newState.cancelled = true;
+            this._newState.cancelled = false;
         } else {
-            this._events.cancelled = true;
+            this._events.cancelled = false;
         }
+    } else {
+        $.TouchInput__onCancel.apply(this,arguments);
     }
-    $.TouchInput__onCancel.apply(this,arguments);
 };
 //=============================================================================
 //
 //=============================================================================
-$.Game_Temp_setDestination = Game_Temp.prototype.setDestination
-Game_Temp.prototype.setDestination = function(x, y) {
+$.Scene_Map_processMapTouch = Scene_Map.prototype.processMapTouch;
+Scene_Map.prototype.processMapTouch = function() {
+    SceneManager.updatePressButtonTemp();
     if (VB.forBidDestination || (VB.forBidButtonDes && VB.pressButtonTemp) || (controlButtonDes && VB.controlVisible)) {
         return;
     }
-    $.Game_Temp_setDestination.call(this,x,y);
+    $.Scene_Map_processMapTouch.apply(this,arguments);
 };
 //=============================================================================
 //
@@ -1379,6 +1425,16 @@ TouchInput._onMove = function(x, y) {
     }
     $.TouchInput__onMove.apply(this,arguments);
 };
+$.TouchInput__onRelease = TouchInput._onRelease;
+TouchInput._onRelease = function(x, y) {
+    if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+        return;
+    }
+    $.TouchInput__onRelease.apply(this,arguments);
+};
+//=============================================================================
+//
+//=============================================================================
 if (isMZ) {
     $.TouchInput__onHover = TouchInput._onHover;
     TouchInput._onHover = function(x, y) {
@@ -1387,14 +1443,15 @@ if (isMZ) {
         }
         $.TouchInput__onHover.apply(this,arguments);
     };
+} else {
+    $.TouchInput__onPointerDown = TouchInput._onPointerDown;
+    TouchInput._onPointerDown = function(event) {
+        if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+            return;
+        }
+        $.TouchInput__onPointerDown.apply(this,arguments);
+    };
 }
-$.TouchInput__onRelease = TouchInput._onRelease;
-TouchInput._onRelease = function(x, y) {
-    if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
-        return;
-    }
-    $.TouchInput__onRelease.apply(this,arguments);
-};
 //=============================================================================
 //
 //=============================================================================
@@ -1550,7 +1607,31 @@ Scene_Boot.prototype.loadVirtualButton = function() {
     for (let i=0,il=otherButtonSetting.length;i<il;i++) {
         list.push(new Game_VB_Normal(i));
     }
-    VB.settingImage = [ImageManager.loadVirtualButton("line"),ImageManager.loadVirtualButton("point"),ImageManager.loadVirtualButton("pad")];
+    VB.settingImage = [
+    	this.loadSettingImageVB("line"),
+    	this.loadSettingImageVB("point"),
+    	this.loadSettingImageVB("pad")
+    ];
+};
+Scene_Boot.prototype.loadSettingImageVB = function(name) {
+	if (imageLoadMode) {
+		let bitmap = ImageManager.loadVirtualButton(name);
+		bitmap.hasLoadedVB = true;
+		return bitmap;
+	} else {
+		let image = new Image();
+		let bitmap = new Bitmap();
+		bitmap.hasLoadedVB = false;
+    	image.onload = this.onLoadedImageVB.bind(this,image,bitmap);
+		image.src = "./" + loadUrl + name + ".png";
+		return bitmap;
+	}
+};
+Scene_Boot.prototype.onLoadedImageVB = function(image,bitmap) {
+	image.onload = null;
+	bitmap._image = image;
+	bitmap.hasLoadedVB = true;
+	bitmap._onLoad();
 };
 Scene_Boot.prototype.isReadyVirtualButton = function() {
     if (!VB.loadedVirtualButton) return false;
@@ -1566,6 +1647,15 @@ Scene_Boot.prototype.isReadyVirtualButton = function() {
         } else {
             return false;
         }
+    }
+    if (VB.settingImage) {
+    	for (let i of VB.settingImage) {
+    	    if (i && i.hasLoadedVB && i.isReady()) {
+    	        //nothing
+    	    } else {
+    	        return false;
+    	    }
+    	}
     }
     VB.readyVirtualButton = true;
     return true;
@@ -1609,8 +1699,16 @@ SceneManager.updateScene = function() {
     $.SceneManager_updateScene.apply(this,arguments);
 };
 SceneManager.updateVirtualButton = function() {
+    if (!VB.readyVirtualButton) return;
     for (let button of VB.buttonList) {
         button.update();
+    }
+    this.updatePressButtonTemp();
+};
+SceneManager.updatePressButtonTemp = function() {
+    VB.pressButtonTemp = !VB.buttonList.every((s)=>!s.isPressed());
+    if (VB.pressButtonTemp && VB.forBidTouchInputWhenPress) {
+        TouchInput.clear();
     }
 };
 //=============================================================================
@@ -1667,7 +1765,7 @@ Game_VB_Base.prototype.loadCommonData = function() {
     this._commonEventOut = Math.judgeAndOutAttribute(this._setting.commonEventOut,0);
     this._commonEventMode = Math.judgeAndOutAttribute(this._setting.commonEventMode,0);
     this._commonEventMode1List = new Array();
-    this._commonEventMode2Interpreter = new Game_Interpreter();
+    this._commonEventMode2Interpreter = null;
     this._posAuto = [
         this._setting["phoneFitModeUD"] === "2",
         this._setting["phoneFitModeLR"] === "1",
@@ -1748,7 +1846,7 @@ Game_VB_Base.prototype.update = function() {
         this.updateBaseData();
         this.updateSetting();
     }
-    this.updateCommonEventMode1();
+    this.updateCommonEvent();
     this.updateCancelDelay();
 };
 Game_VB_Base.prototype.updateBaseData = function() {
@@ -1927,7 +2025,7 @@ Game_VB_Base.prototype.isSceneVisible = function(vs) {
     }
 };
 Game_VB_Base.prototype.isTextHideVisible = function(vs) {
-    return true;//!$gameMessage.isBusy();
+    return vs.textHide?!$gameMessage.isBusy():true;
 };
 Game_VB_Base.prototype.isSwitchVisible = function(vs) {
     if (vs.switch === 0) {
@@ -1944,6 +2042,10 @@ Game_VB_Base.prototype.isScriptVisible = function(vs) {
     }
 };
 Game_VB_Base.prototype.updateShowOrHide = function() {
+    if (VB.settingMode) {
+        this._visible = true;
+        return;
+    }
     let result = true;
     let vs = this._visibleSetting;
     if (vs.controlBy && !this.isControVisible(vs)) {result = false;}
@@ -1954,7 +2056,9 @@ Game_VB_Base.prototype.updateShowOrHide = function() {
     this._visible = result;
 };
 Game_VB_Base.prototype.scriptIn = function() {
-    VB.pressButtonTemp = true;
+	if (this.isPressed()) {
+		return;
+	}
     if (this._scriptIn && this._scriptIn.length>0) {
         eval(this._scriptIn);
     }
@@ -1969,7 +2073,9 @@ Game_VB_Base.prototype.scriptMove = function() {
     
 };
 Game_VB_Base.prototype.scriptOut = function() {
-    VB.pressButtonTemp = false;
+	if (!this.isPressed()) {
+		return;
+	}
     if (this._scriptOut && this._scriptOut.length>0) {
         eval(this._scriptOut);
     }
@@ -1995,6 +2101,9 @@ Game_VB_Base.prototype.runCommonEvent = function(status,mode,id) {
             this._commonEventMode1List.push(interpreter);
         }
     } else if (mode===2) {
+    	if (!this._commonEventMode2Interprete) {
+    		this._commonEventMode2Interprete = new Game_Interpreter();
+    	}
         if (!this._commonEventMode2Interpreter.isRunning()) {
             let ceData = $dataCommonEvents[id];
             if (ceData) {
@@ -2011,13 +2120,15 @@ Game_VB_Base.prototype.runCommonEvent = function(status,mode,id) {
         $gameTemp.reserveCommonEvent(id);
     }
 };
-Game_VB_Base.prototype.updateCommonEventMode1 = function() {
+Game_VB_Base.prototype.updateCommonEvent = function() {
     if (this._commonEventIn===0&&this._commonEventOut===0) {
         return;
     }
     let sceneName = SceneManager._scene ? SceneManager._scene.constructor.name : "";
     if (commonEventActiveScene.includes(sceneName)) {
-        this._commonEventMode2Interpreter.update();
+        if (this._commonEventMode2Interpreter) {
+        	this._commonEventMode2Interpreter.update();
+        }
         if (this._commonEventMode1List.length>0) {
             let nextList = new Array();
             for (let commonEvent of this._commonEventMode1List) {
@@ -2055,7 +2166,10 @@ Game_VB_Base.prototype.getEventY = function(e) {
     }
 };
 Game_VB_Base.prototype.clearAllPressData = function() {
-    VB.pressButtonTemp = false;
+
+};
+Game_VB_Base.prototype.isPressed = function() {
+    return false;
 };
 //=============================================================================
 //
@@ -2096,9 +2210,9 @@ Game_VB_Normal.prototype.startTouch = function(e) {
     if (VB.settingMode) {
         this.updateVBSettingMode(0,this.getEventX(e),this.getEventY(e));
     } else {
+        this.scriptIn();
         this._isPressed = true;
         this.updateInput();
-        this.scriptIn();
     }
 };
 Game_VB_Normal.prototype.moveTouch = function(e) {
@@ -2132,9 +2246,9 @@ Game_VB_Base.prototype.updateCancelDelay = function() {
     }
 };
 Game_VB_Normal.prototype.clearAllPressData = function() {
+    this.scriptOut();
     this._isPressed = false;
     this.updateInput();
-    this.scriptOut();
 };
 Game_VB_Normal.prototype.updateInput = function() {
     let buttonName = this._setting["button"];
@@ -2145,6 +2259,9 @@ Game_VB_Normal.prototype.updateInput = function() {
 Game_VB_Normal.prototype.updateBaseData = function() {
     let data = this._saveData;
     this.refreshDivAttribute(this._div,this._visible,data.x,data.y,this.getProperOpacity(data.opacity),data.scale,this._isPressed);
+};
+Game_VB_Normal.prototype.isPressed = function() {
+    return this._isPressed;
 };
 //=============================================================================
 //
@@ -2304,19 +2421,19 @@ Game_VB_Dir.prototype.updateBaseData = function() {
 Game_VB_Dir.prototype.updateCancelDelay = function() {
     if (this._cancelEventDelay) {
         if (this._cancelEventMode===0) {
+            this.scriptOut();
             let div = this._cancelEventDelay.target;
             let index = div.remIndexVB;
             this.updateInputMode0(index,false);
-            this.scriptOut();
         } else if (this._cancelEventMode===1) {
+            this.scriptOut();
             let div = this._cancelEventDelay.target;
             let index = div.remIndexVB;
             this.updateInputMode1(index,false);
-            this.scriptOut();
         } else if (this._cancelEventMode===2) {
+            this.scriptOut();
             this.clearAllPressDataMode2();
             this.updateInputMode2Calculate();
-            this.scriptOut();
         }
         this._cancelEventMode = -1;
         this._cancelEventDelay = null;
@@ -2362,10 +2479,10 @@ Game_VB_Dir.prototype.startTouchMode0 = function(e) {
     if (VB.settingMode) {
         this.updateVBSettingMode(0,this.getEventX(e),this.getEventY(e));
     } else {
+        this.scriptIn();
         let div = e.target;
         let index = div.remIndexVB;
         this.updateInputMode0(index,true);
-        this.scriptIn();
     }
 };
 Game_VB_Dir.prototype.moveTouchMode0 = function(e) {
@@ -2437,10 +2554,10 @@ Game_VB_Dir.prototype.startTouchMode1 = function(e) {
     if (VB.settingMode) {
         this.updateVBSettingMode(0,this.getEventX(e),this.getEventY(e));
     } else {
+        this.scriptIn();
         let div = e.target;
         let index = div.remIndexVB;
         this.updateInputMode1(index,true);
-        this.scriptIn();
     }
 };
 Game_VB_Dir.prototype.moveTouchMode1 = function(e) {
@@ -2521,6 +2638,7 @@ Game_VB_Dir.prototype.startTouchMode2 = function(e) {
     if (VB.settingMode) {
         this.updateVBSettingMode(0,this.getEventX(e),this.getEventY(e));
     } else {
+        this.scriptIn();
         let graph = Graphics;
         this._mode2X = graph.pageToCanvasX(this.getEventX(e));
         this._mode2Y = graph.pageToCanvasY(this.getEventY(e));
@@ -2528,7 +2646,6 @@ Game_VB_Dir.prototype.startTouchMode2 = function(e) {
         this._repairYMode2 = -graph.offsetYVB(this._mode2ElementList[1].posVBAuto);
         this._mode2Press = true;
         this.updateInputMode2Calculate();
-        this.scriptIn();
     }
 };
 Game_VB_Dir.prototype.moveTouchMode2 = function(e) {
@@ -2578,10 +2695,8 @@ Game_VB_Dir.prototype.updateMode2 = function() {
         this._padHalfWidth = padData.w*(0.5-this._xAnchor);
         this._padHalfHeight = padData.h*(0.5-this._yAnchor);
         this.refreshDivAttribute(this._mode2ElementList[1],this._visible,data.x,data.y,this.getProperOpacity(data.opacity),data.scale,this._mode2Press,{ax:0.5,ay:0.5,ox:this._padHalfWidth,oy:this._padHalfHeight});
-        VB.pressButtonTemp = false;
     } else {
         this.refreshDivAttribute(this._mode2ElementList[1],this._visible,this._mode2X,this._mode2Y,this.getProperOpacity(data.opacity),data.scale,this._mode2Press,{ax:0.5,ay:0.5,ox:this._repairXMode2,oy:this._repairYMode2});
-        VB.pressButtonTemp = true;
     }
 };
 Game_VB_Dir.prototype.updateInputMode2Calculate = function() {
@@ -2680,6 +2795,14 @@ Game_VB_Dir.prototype.updateInputMode2 = function(ro) {
             Input._currentState['right']=false;
             Input._currentState['up']=false;
         }
+    }
+};
+Game_VB_Dir.prototype.isPressed = function() {
+    switch(this._dirMode) {
+    case 0:return this._mode0ElementPress ? !this._mode0ElementPress.every((s)=>(!s)) : false;
+    case 1:return this._mode1ElementPress ? !this._mode1ElementPress.every((s)=>(!s)) : false;
+    case 2:return this._mode2Press || false;
+    default:return false;
     }
 };
 //=============================================================================
