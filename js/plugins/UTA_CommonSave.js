@@ -541,7 +541,7 @@ var utakata = utakata || (utakata = {});
         var key = this.webStorageKeyCommonSave();
         var data = LZString.compressToBase64(json);
         //localStorage.setItem(key, data);
-        ServerSave.ServerSaveManager.saveToWebServer(key, data);
+        //ServerSave.ServerSaveManager.saveToWebServer(key, data);
     };
 
     //check exists ----------------------------------------------------------------
