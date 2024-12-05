@@ -512,8 +512,8 @@ var utakata = utakata || (utakata = {});
 
     StorageManager.loadFromWebStorageCommonSave = function(){
         var key = this.webStorageKeyCommonSave();
-        //var data = localStorage.getItem(key);
-        var data = ServerSave.ServerSaveManager.loadFromWebServer(key);
+        var data = localStorage.getItem(key);
+        //var data = ServerSave.ServerSaveManager.loadFromWebServer(key);
          return LZString.decompressFromBase64(data);
     };
 
@@ -540,7 +540,7 @@ var utakata = utakata || (utakata = {});
     StorageManager.saveToWebStorageCommonSave = function(json){
         var key = this.webStorageKeyCommonSave();
         var data = LZString.compressToBase64(json);
-        //localStorage.setItem(key, data);
+        localStorage.setItem(key, data);
         //ServerSave.ServerSaveManager.saveToWebServer(key, data);
     };
 
