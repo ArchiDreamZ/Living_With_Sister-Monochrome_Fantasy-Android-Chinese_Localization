@@ -1,4 +1,5 @@
 # 妹相随：黑白世界的缤纷冒险-安卓-全彩绘版 中文精修与补充
+*（apk安装包下载请往下翻，查看“下载”章节）*
 ## 游戏信息
 该游戏在24年3月由神乐发行，上架到了Steam。Steam版中文名为：“妹相随：黑白世界的缤纷冒险”，英文名为“Living With SIster Monochrome Fantasy”
 
@@ -8,17 +9,17 @@
 
 **DLC**：该游戏于24年6月13日在DLsite发布更新DLC，这是妹相随的最后一次内容更新。Steam版将会在修复bug并翻译后跟进更新DLC。而手机端由HBOX在24年10月31日发布带有DLC内容的1.2.1版。
 
-（由于目前神乐还没有在Steam发布DLC，也就是神乐还没有发布官方翻译，因此手机端将先使用Don的翻译，后再参考神乐官译。）
+（目前神乐已经发布了DLC官方翻译，我正在逐步进行对安卓妹相随DLC版的精翻。）
 
 **最新版本信息**
 
-截止至2024年11月，妹相随共有三个版本，分别为：DLsite的原作者发布版本、Steam的神乐发行版、HBOX的RPG Maker MV移植版。
+截止至2025年8月，妹相随共有三个版本，分别为：DLsite的原作者发布版本、Steam的神乐发行版、HBOX的RPG Maker MV移植版。
 
-DLsite版的最新版本为1.4.5（也被称为1.45），DLC版本为2.0.1。
+**DLsite版**的本体版本为1.4.5（也被称为1.45），DLC版本为2.0.1。
 
-对应Steam的神乐发行版1.04。
+对应**Steam的神乐发行版**的本体版本为1.04，DLC版本为2.0.2。
 
-对应HBOX的RPG Maker移植版(含DLC)版本为1.2.3。
+对应**HBOX的RPG Maker移植版**(含DLC)版本为1.2.5。
 
 最新更新情况可以在相关链接中去官网查看。
 
@@ -28,13 +29,13 @@ B站专栏-汉化项目启动（已被平台封禁）：[【妹相随/安卓】�
 
 B站专栏-精翻汉化&彩绘整合项目：[【妹相随/安卓】妹同居2精翻汉化&彩绘整合项目](https://www.bilibili.com/read/cv39842256)
 
-官方商店链接：[***DLsite***-妹!せいかつ～ファンタジー～](https://www.dlsite.com/maniax/work/=/product_id/RJ338582.html) - [***Steam***-妹相随～黑白世界的缤纷冒险～](https://store.steampowered.com/app/2429860/_/)
+官方商店链接：[***DLsite***-妹!せいかつ～ファンタジー～](https://www.dlsite.com/maniax/work/=/product_id/RJ338582.html) - [***Steam***-妹相随～黑白世界的缤纷冒险～](https://store.steampowered.com/bundle/48812/Living_with_Sister_Bundle/)
 
 官方更新动态：[***Ci-en*** (いぬすく / Inusuku)](https://ci-en.dlsite.com/creator/64/article)
 
 英文社区（翻译与模组）：[***F95Zone***-Living With Sister: Monochrome Fantasy [Steam] [Inusuku]](https://f95zone.to/threads/living-with-sister-monochrome-fantasy-steam-inusuku.104365/)
 
-RPG Maker移植版-日文原版 (安卓/苹果)：[***HBOX***-妹！せいかつ～ファンタジー～](https://hbox.jp/category/appli/doujin/=/cid/450801)
+RPG Maker移植版-日文原版 (安卓/苹果)：[***HBOX***-妹！せいかつ～ファンタジー～（无DLC原版）](https://hbox.jp/category/appli/doujin/=/cid/450801) - [***HBOX***-妹！せいかつ～ファンタジー～（含DLC版）](https://hbox.jp/category/doujin/doujin/=/cid/555512)
 
 RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“mario6714”翻译](https://mega.nz/file/XcVm3K6Z#ghfIBuihlTi4dhiWExAuCZBx2SAtXp2vJtEvVhNsnTU)
 
@@ -42,7 +43,7 @@ RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“m
 
 更多链接与介绍：[妹相随所有相关链接汇总与介绍](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki)
 
-快捷入口：[神乐官方R18&汉化补丁](https://kagurafan.com/) - [彩绘模组 Color Mod](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki/%E5%BD%A9%E7%BB%98%E7%9B%B8%E5%85%B3) - [狐娘模组 FFFox Mod](https://f95zone.to/threads/imouto-life-fantasy-fffox-mod.164340/) - [ApkHub](https://apkhub.cloud/) - [青桔网](https://qingjuacg.top/)
+快捷入口：[神乐官方R18&汉化补丁](https://kagurafan.com/category/%e8%a1%a5%e4%b8%81/%e5%a6%b9%e7%9b%b8%e9%9a%8f%ef%bd%9e%e9%bb%91%e7%99%bd%e4%b8%96%e7%95%8c%e7%9a%84%e7%bc%a4%e7%ba%b7%e5%86%92%e9%99%a9%ef%bd%9edlc/) - [彩绘模组 Color Mod](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki/%E5%BD%A9%E7%BB%98%E7%9B%B8%E5%85%B3) - [狐娘模组 FFFox Mod](https://f95zone.to/threads/imouto-life-fantasy-fffox-mod.164340/) - [ApkHub](https://apkhub.cloud/) - [青桔网](https://qingjuacg.top/)
 
 ## 仓库介绍
 该仓库为妹相随的RPG Maker引擎版（安卓）的精翻汉化项目，我将会以日文原版为基础，逐步精翻汉化；整合多个作者的彩绘贴图资源，同时发布彩绘版与黑白版；进行多种优化，尽可能做到更加流畅。最终做出一个精翻彩绘又流畅的版本。
@@ -64,13 +65,18 @@ RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“m
 因此我只好现学用Android Studio重新自己构建安装包，尽可能精简结构。并且删去了安装包里200mb的与妹相随无关的RPG Maker模板素材图片，减小安装包体积。
 
 ## 为什么创建这个项目？
-#### 国内汉化情况
-在此之前国内没有RPG Maker引擎的精翻汉化，当时有两个汉化版本：一个是加了彩绘贴图的巴图勇士汉化，翻译大部分为机翻，甚至很多部分没有翻译，很难接受；另一个是Don汉化群的群友汉化，是使用AI+人工润色，但很多地方翻译依然不准确，且掺杂了巨量的玩梗要素，非常难绷。
+#### 当时国内汉化情况
+在此之前国内没有RPG Maker引擎的精翻汉化，当时有两个汉化版本：
+
+一个是加了彩绘贴图的巴图勇士汉化，翻译大部分为机翻，甚至少数部分没有翻译，很难接受；另一个是Don汉化群的群友汉化，是使用AI+人工润色，但很多地方翻译依然不准确，且掺杂了巨量的玩梗要素，非常难绷。
+
+#### 国内汉化后续与现状
+令人高兴的是，在HBOX于24年10月31日发布了含DLC的安卓版本之后，巴图勇士于11月16日发布了AI翻译+人工润色的含DLC的汉化版本。而不幸的是，在11月17日，我之前发布的原汉化专栏被锁定封禁，我只能重新发一个新的专栏。
 
 #### 汉化原因
-我开始游玩时，下载了巴图勇士版，由于汉化与卡顿问题，感觉游戏体验很糟糕，于是自己动手精修一下稍微改善体验。但我在修改过程中意识到，这压根就不是小修一下就能解决的，绝大部分内容都是机翻。又逐渐发觉该手机版是HBOX公司移植的，发现了日文原版，且原版并没有那些卡顿，运行很流畅。
+我开始游玩时，下载了巴图勇士版，由于汉化与卡顿问题，感觉游戏体验很糟糕，于是自己动手替巴图精修一下稍微改善体验。但我在修改过程中意识到，这压根就不是小修一下就能解决的，绝大部分内容都是机翻。又逐渐发觉该手机版是HBOX移植的，发现了日文原版，且原版并没有那么卡顿，运行更流畅一些。
 
-因此我决定从日文原版从头建立汉化，开始了正式的精翻汉化项目——彼梦汉化版，以日文原版为基础，去制作一个流畅又精翻的版本。
+因此我决定从日文原版从头建立汉化，开始了正式的精翻汉化项目——彼梦汉化版，以日文原版为基础，去制作一个既流畅又精翻的版本。
 
 原本就只是自己玩觉得有问题，为了得到更好的体验就自己改了自己用，后来觉得与其自己改了用，不如建立项目做好这件事，分享给更多人，让更多人摆脱这个现状。又想到与其闭门造车全都自己摸索，不如公布出来让有更多人了解与参与。
 
@@ -135,9 +141,9 @@ RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“m
 该按键初始位置可能不合适，可以点击左上角音量键小喇叭打开游戏设置菜单，来调整该按键的位置。
 
 ## 卡顿问题
-游戏卡顿是RPG Maker引擎的通病，体现为玩一段时间就变卡，图片素材越多卡的越快，推测为该引擎无法正常清理图片缓存。运行内存越多，卡顿现象越轻。
+游戏卡顿是RPG Maker引擎的通病，日文原版就有卡顿现象，体现为玩一段时间就变卡，图片素材越多卡的越快，推测为该引擎无法正常清理图片缓存。运行内存越多，卡顿现象越轻。
 
-这问题是引擎的底层问题，无法解决，只能通过压缩图片质量进行缓解。
+这问题是引擎的底层问题，无法彻底解决，只能通过压缩图片质量进行缓解。
 
 也可以尝试使用JoiPlay加载游戏来缓解卡顿，将.apk后缀改为.zip解压，并使用JoiPlay加载assets文件夹下面的index.html文件。
 
