@@ -1,0 +1,256 @@
+﻿Black Board|黒板
+Black Board|黒板
+Black Board|黒板
+White Board|ホワイトボード
+White Board|ホワイトボード
+White Board|ホワイトボード
+Cloth Partition A|布の衝立A
+Cloth Partition B|布の衝立B
+Black Board|黒板
+Black Board|黒板
+Black Board|黒板
+White Board|ホワイトボード
+White Board|ホワイトボード
+White Board|ホワイトボード
+Cloth Partition A|布の衝立A
+Cloth Partition B|布の衝立B
+Stool|腰掛けイス
+Skeleton Model|骨格模型
+Biological Specimen|生物標本
+Potted Plant|植木鉢
+Armchair|肘掛け椅子
+Insect Specimen|昆虫標本
+Restroom Mark (Men)|トイレマーク（男性）
+Restroom Mark (Women)|トイレマーク（女性）
+Wall Speaker|壁掛けスピーカー
+Skeleton Model |骨格模型
+Biological Specimen|生物標本
+Fire Extinguisher|消火器
+Armchair|肘掛け椅子
+Room Plate|室名札
+EXIT Sign|EXITプレート
+Vent|通気口
+Painting A|絵画A
+Painting B|絵画B
+Vision Test Chart|視力検査表
+Plaster Bust|石膏胸像
+Calendar|カレンダー
+Plant A|植物A
+Plant B|植物B
+Plant C|植物C
+Painting C|絵画C
+Painting D|絵画D
+Anatomical Chart|人体図
+Canvas|キャンバス
+Bulletin Board|掲示板
+Plant A|植物A
+Plant B|植物B
+Plant C|植物C
+Plumbing|配管
+Plumbing|配管
+Valve|バルブ
+Machine A|機械A
+Machine B|機械B
+Machine C|機械C
+Air Vent A|通風口A
+Air Vent B|通風口B
+Plumbing|配管
+Plumbing|配管
+Plumbing|配管
+Neon Tube|ネオン管
+Neon Tube|ネオン管
+Neon Tube|ネオン管
+Fan|ファン
+Fluorescent Light|蛍光灯
+Plumbing|配管
+Plumbing|配管
+Plumbing|配管
+Neon Tube|ネオン管
+Neon Tube|ネオン管
+Neon Tube|ネオン管
+Outdoor Air Intake Unit|室外機
+Shutter|シャッター
+Plumbing|配管
+Plumbing|配管
+Plumbing|配管
+Control Panel A|操作パネルA
+Control Panel B|操作パネルB
+Control Panel C|操作パネルC
+Pipe (H)|パイプ（横）
+Pipe (V)|パイプ（縦）
+Line A|ラインA
+Line B|ラインB
+Road Closed|通行止め
+Waste|廃棄物
+Scrap Metal|スクラップ
+Mysterious Liquid|謎の液体
+Scattered Papers|散らばった紙
+Pipe (V)|パイプ（縦）
+Belt Conveyor (V)|ベルトコンベアー（縦）
+Belt Conveyor (H)|ベルトコンベアー（横）
+Belt Conveyor (H)|ベルトコンベアー（横）
+Belt Conveyor (H)|ベルトコンベアー（横）
+Duct|ダクト
+Mechanical Device|機械装置
+Pile of Rubble|瓦礫の山
+Pile of Rubble|瓦礫の山
+Belt Conveyor (V)|ベルトコンベアー（縦）
+Robot Arm|ロボットアーム
+Server Machine|サーバマシン
+Meters|計器類
+Duct|ダクト
+Mechanical Device|機械装置
+Pile of Rubble|瓦礫の山
+Pile of Rubble|瓦礫の山
+Belt Conveyor (V)|ベルトコンベアー（縦）
+Robot Arm|ロボットアーム
+Server Machine|サーバマシン
+Meters|計器類
+Duct|ダクト
+Drain|排水口
+Graffiti|落書き
+Graffiti|落書き
+Monitor A|モニターA
+Monitor B|モニターB
+Large Monitor|大型モニター
+Large Monitor|大型モニター
+IV Stand|点滴スタンド
+ECG Monitor|心電図モニタ
+Sewing Mannequin|トルソー
+Rubble|瓦礫
+Operation Board A|操作盤A
+Operation Board B|操作盤B
+Operation Board C|操作盤C
+Operation Board D|操作盤D
+IV Stand|点滴スタンド
+ECG Monitor|心電図モニタ
+Sewing Mannequin|トルソー
+Broken Machine|壊れた機械
+Stairs|階段
+Stairs|階段
+Stairs|階段
+Cage|檻
+Cage|檻
+Handrail|欄干
+Handrail|欄干
+Handrail|欄干
+Stairs|階段
+Stairs|階段
+Stairs|階段
+Curtains A|カーテンA
+Curtains B|カーテンB
+Curtains C|カーテンC
+Curtains D|カーテンD
+Handrail|欄干
+Stairs|階段
+Stairs|階段
+Stairs|階段
+Curtains A|カーテンA
+Curtains B|カーテンB
+Curtains C|カーテンC
+Curtains D|カーテンD
+Emergency Alarm|非常ベル
+Spider Web|蜘蛛の巣
+Mirror|鏡
+Vase|花瓶
+Piano|ピアノ
+Piano|ピアノ
+Piano|ピアノ
+Stained Glass|ステンドグラス
+Decorative Pillar|装飾柱
+Dripping|液垂れ
+Mirror|鏡
+Lamp|電気スタンド
+Piano|ピアノ
+Piano|ピアノ
+Piano|ピアノ
+Stained Glass|ステンドグラス
+Decorative Pillar|装飾柱
+Picture Frame|写真立て
+Side Table|サイドテーブル
+Altar|祭壇
+Fireplace|暖炉
+Fireplace|暖炉
+Fireplace|暖炉
+Stuffed Doll A|ぬいぐるみA
+Decorative Pillar|装飾柱
+Book A|本A
+Book B|本B
+Glass Pieces|ガラス片
+Fireplace|暖炉
+Fireplace|暖炉
+Fireplace|暖炉
+Doll|人形
+Stuffed Doll B|ぬいぐるみB
+Beer Mug|ビールジョッキ
+Wine & Glass|ワインとグラス
+Noodle Dish|麺料理
+Bread|パン
+Banister A (V)|手すりA（縦）
+Banister A (V)|手すりA（縦）
+Banister B (V)|手すりB（縦）
+Banister B (V)|手すりB（縦）
+Meat Dish|肉料理
+Roast Chicken|ローストチキン
+Cake|ケーキ
+Fruit Bowl|果物盛り合わせ
+Banister A (V)|手すりA（縦）
+Banister A (V)|手すりA（縦）
+Banister B (V)|手すりB（縦）
+Banister B (V)|手すりB（縦）
+Plate A|皿A
+Teapot & Cup|ティーポットとカップ
+Ration|レーション
+Plate B|皿B
+Banister A (V)|手すりA（縦）
+Banister A (V)|手すりA（縦）
+Banister B (V)|手すりB（縦）
+Banister B (V)|手すりB（縦）
+Demon Statue|悪魔像
+Goddess Statue|女神像
+Soldier Statue|兵士像
+Wall Clock|柱時計
+Banister A (H)|手すりA（横）
+Banister A (H)|手すりA（横）
+Banister A (H)|手すりA（横）
+Banister A (H)|手すりA（横）
+Demon Statue|悪魔像
+Goddess Statue|女神像
+Soldier Statue|兵士像
+Wall Clock|柱時計
+Banister B (H)|手すりB（横）
+Banister B (H)|手すりB（横）
+Banister B (H)|手すりB（横）
+Banister B (H)|手すりB（横）
+Monument A|モニュメントA
+Monument B|モニュメントB
+Huge Stele|巨大な石版
+Huge Stele|巨大な石版
+Huge Stele|巨大な石版
+Huge Iron Monument|巨大プレート
+Huge Iron Monument|巨大プレート
+Huge Iron Monument|巨大プレート
+Monument A|モニュメントA
+Monument B|モニュメントB
+Huge Stele|巨大な石版
+Huge Stele|巨大な石版
+Huge Stele|巨大な石版
+Huge Iron Monument|巨大プレート
+Huge Iron Monument|巨大プレート
+Huge Iron Monument|巨大プレート
+Monument C|モニュメントC
+Monument D|モニュメントD
+Sphere Machinery|球体機械
+Sphere Machinery|球体機械
+Sphere Machinery|球体機械
+Large Machine|大型機械
+Large Machine|大型機械
+Large Machine|大型機械
+Monument C|モニュメントC
+Control Panel|コントロールパネル
+Sphere Machinery|球体機械
+Sphere Machinery|球体機械
+Sphere Machinery|球体機械
+Large Machine|大型機械
+Large Machine|大型機械
+Large Machine|大型機械

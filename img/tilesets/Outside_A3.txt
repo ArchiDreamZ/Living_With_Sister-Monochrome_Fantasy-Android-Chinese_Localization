@@ -1,0 +1,32 @@
+﻿Roof A (Red Tile)|屋根A（赤瓦）
+Roof B (Orange Tile)|屋根B（橙瓦）
+Roof C (Indigo Tile)|屋根C（藍瓦）
+Roof D (Green Tile)|屋根D（緑瓦）
+Roof E (Blue Tile)|屋根E（青瓦）
+Roof F (Dressed Tile)|屋根F（化粧瓦）
+Roof G (Khaki Tile)|屋根G（カーキ瓦）
+Roof H (Sheet Metal)|屋根H（鉄板）
+Outer Wall A (Plaster)|外壁A（白壁）
+Outer Wall B (Rock Wall)|外壁B（石壁）
+Outer Wall C (Rock Wall)|外壁C（石壁）
+Outer Wall D (Rock Wall)|外壁D（石壁）
+Outer Wall E (Brick)|外壁E（レンガ）
+Outer Wall F (Decorative Tile)|外壁F（化粧タイル）
+Outer Wall G (Dirt)|外壁G（土壁）
+Outer Wall H (Wood)|外壁H（木造）
+Roof I (Wood)|屋根I（木造）
+Roof J (Wood)|屋根J（木造）
+Roof K (Log)|屋根K（丸太）
+Roof L (Thatch)|屋根L（藁）
+Roof M (Stone)|屋根M（石）
+Roof N (Tent)|屋根N（テント）
+Snow Roof A|雪の屋根A
+Snow Roof B|雪の屋根B
+Outer Wall I (Wood)|外壁I（木造）
+Outer Wall J (Wood)|外壁J（木造）
+Outer Wall K (Log)|外壁K（丸太）
+Outer Wall L (Wood)|外壁L（木造）
+Outer Wall M (Rock Wall)|外壁M（石壁）
+Outer Wall N (Tent)|外壁N（テント）
+Snow Outer Wall (Wood)|雪の外壁（木造）
+Snow Outer Wall (Brick)|雪の外壁（レンガ）
