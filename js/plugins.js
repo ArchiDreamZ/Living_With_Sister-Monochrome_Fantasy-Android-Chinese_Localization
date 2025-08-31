@@ -34,5 +34,5 @@ var $plugins =
 {"name":"UTA_CommonSave","status":true,"description":"共有のセーブデータを作成し、指定したスイッチ・変数の状態をセーブデータ間で共有します。","parameters":{"Target Switches":"","Target Variables":"1425-1441,1450-1463","Is Auto":"true","Auto on Gameover":"false","Show Trace":"false"}},
 {"name":"TitleImageChange","status":true,"description":"タイトル画面変更プラグイン","parameters":{"進行度変数":"499","優先度変数":"0","タイトル1の進行度":"1","タイトル1の画像":"TitleGraphic1","タイトル1のBGM":"nekomimi","タイトル2の進行度":"2","タイトル2の画像":"TitleGraphic2","タイトル2のBGM":"nekomimi","タイトル3の進行度":"3","タイトル3の画像":"TitleGraphic3","タイトル3のBGM":"nekomimi","以降の進行度":"4,5,6","以降の画像":"TitleGraphic4,TitleGraphic5,TitleGraphic6","以降のBGM":"nekomimi,nekomimi,White_Base"}},
 {"name":"UTA_MessageSkip","status":false,"description":"特定キーを押す事でメッセージをスキップできるようにします。","parameters":{"Skip Key":"control","Show Trace":"false"}},
-{"name":"VersionSpecified","status":true,"description":"【MMP ver.1.0】タイトル画面にバージョンを明記します。","parameters":{"version":"Version 1.2.1","fontSize":"20","fontColor":"rgb(255, 255, 255)","windowX":"800","windowY":"470"}}
+{"name":"VersionSpecified","status":true,"description":"【MMP ver.1.0】タイトル画面にバージョンを明記します。","parameters":{"version":"Version 1.2.3","fontSize":"20","fontColor":"rgb(255, 255, 255)","windowX":"800","windowY":"470"}}
 ];
