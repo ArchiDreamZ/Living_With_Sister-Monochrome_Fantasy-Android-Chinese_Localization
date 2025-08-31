@@ -139,16 +139,85 @@
             }else if(info.youbi == 6){
                 str += '日曜　';
             }
-    
+            
+            if(typeof info.katagaki === "undefined" || typeof info.katagaki2 === "undefined") {
+                str += info.jikan + '時';
+            }else{
             str += info.jikan + '時　' + info.katagaki + info.katagaki2 + 'お兄ちゃん';
-    
+            }
+
             this.drawText(str, rect.x + 192, rect.y+100, rect.width - 192);
         }
 
+       //  セーブ画像を表示する
+        //　空をセット
+        var iconface = "2"
+        var iconidx = "4"
+        var iconflg = false
 
-        if (valid) {
-            this.drawPartyfaces(info, rect.x, bottom - 144);
-        }
+        if(info.keikanissu >= 100 && iconflg == false){
+            iconface = "1"
+            iconidx = "2"
+            if(info.onsen >= 10 && iconflg == false){
+                iconface = "1"
+                iconidx = "4"
+            }
+            iconflg = true
+        }else if(info.keikanissu >= 85 && iconflg == false){
+            iconface = "1"
+            iconidx = "1"
+            if(info.onsen >= 10 && iconflg == false){
+                iconface = "1"
+                iconidx = "4"
+            }
+            iconflg = true
+
+        }else if(info.keikanissu >= 64 && iconflg == false){
+                iconface = "2"
+                iconidx = "1"
+                iconflg = true
+
+        }else if(info.keikanissu >= 54 && iconflg == false){
+                iconface = "1"
+                iconidx = "5"
+                iconflg = true
+
+        }else if(info.keikanissu >= 44 && iconflg == false){
+                iconface = "1"
+                iconidx = "7"
+                iconflg = true
+
+        }else if(info.keikanissu >= 34 && iconflg == false){
+                iconface = "2"
+                iconidx = "0"
+                iconflg = true
+
+        }else if(info.keikanissu >= 26 && iconflg == false){
+                if(info.akatuki == 0){
+                    iconface = "1"
+                    iconidx = "3"
+                }else{
+                    iconface = "1"
+                    iconidx = "0"
+                }
+                iconflg = true
+
+        }else if(info.keikanissu >= 11 && iconflg == false){
+                iconface = "1"
+                iconidx = "6"
+                iconflg = true
+
+        }else{
+                iconface = "1"
+                iconidx = "6"
+                iconflg = true
+
+        }    
+        this.drawFace(iconface, iconidx, rect.x +800, rect.y, 144, 144);
+
+        //if (valid) {
+        //    this.drawPartyfaces(info, rect.x, bottom - 144);
+        //}
         this.drawText(info.playtime, rect.x, playtimeY, rect.width, 'right');
     };
 

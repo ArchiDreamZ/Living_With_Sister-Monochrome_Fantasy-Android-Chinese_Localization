@@ -6,7 +6,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="icon" href="icon/icon.png" type="image/png">
-        <meta name="apple-mobile-web-app-title" content="妹！せいかつ～ファンタジー～">
+        <meta name="apple-mobile-web-app-title" content="妹！せいかつ～ファンタジー～DLC">
         <link rel="apple-touch-icon" href="icon/icon.png">
         <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
         <link rel="manifest" href="./manifest.json">
@@ -33,5 +33,26 @@
             navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
             }
             </script>
+    <script>
+        document.addEventListener('click', function() {
+            var elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { // Firefox
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { // IE/Edge
+                elem.msRequestFullscreen();
+            }
+        });
+        document.addEventListener('fullscreenchange', function() {
+            if (document.fullscreenElement) {
+            } else {
+                //alert('Exited full screen mode');
+            }
+        });
+    </script>
+
     </body>
 </html>
