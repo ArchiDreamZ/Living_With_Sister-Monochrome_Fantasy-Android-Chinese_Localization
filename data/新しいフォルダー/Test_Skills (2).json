@@ -1,4 +1,0 @@
-[
-null,
-{"id":1,"animationId":-1,"damage":{"critical":true,"elementId":-1,"formula":"a.atk * 4 - b.def * 2","type":1,"variance":20},"description":"","effects":[{"code":21,"dataId":0,"value1":1,"value2":0}],"hitType":1,"iconIndex":76,"message1":"の攻撃！","message2":"","mpCost":0,"name":"攻撃","note":"スキル１番は［攻撃］コマンドを\n選択したときに使用されます。","occasion":1,"repeats":1,"requiredWtypeId1":0,"requiredWtypeId2":0,"scope":1,"speed":0,"stypeId":0,"successRate":100,"tpCost":0,"tpGain":10}
-]

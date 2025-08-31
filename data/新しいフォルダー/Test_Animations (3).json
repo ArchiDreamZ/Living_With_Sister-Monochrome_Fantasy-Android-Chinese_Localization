@@ -1,4 +1,0 @@
-[
-null,
-{"id":1,"animation1Hue":0,"animation1Name":"Hit1","animation2Hue":0,"animation2Name":"","frames":[[],[[0,0,0,250,0,0,255,1],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0],[-1,0,0,0,0,0,0,0]],[[1,0,0,200,0,0,255,1]],[[2,0,0,200,0,0,255,1]],[[3,0,0,200,0,0,255,1]]],"name":"打撃/物理","position":1,"timings":[{"flashColor":[255,255,255,255],"flashDuration":2,"flashScope":1,"frame":0,"se":{"name":"Blow3","pan":0,"pitch":100,"volume":90}}]}
-]

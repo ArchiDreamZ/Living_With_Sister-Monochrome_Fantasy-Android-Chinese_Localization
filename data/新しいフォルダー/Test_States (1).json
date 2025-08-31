@@ -1,4 +1,0 @@
-[
-null,
-{"id":1,"autoRemovalTiming":0,"chanceByDamage":100,"iconIndex":1,"maxTurns":1,"message1":"は倒れた！","message2":"を倒した！","message3":"","message4":"は立ち上がった！","minTurns":1,"motion":3,"name":"戦闘不能","note":"ステート１番はＨＰが０になったときに\n自動的に付加されます。","overlay":0,"priority":100,"releaseByDamage":false,"removeAtBattleEnd":false,"removeByDamage":false,"removeByRestriction":false,"removeByWalking":false,"restriction":4,"stepsToRemove":100,"traits":[{"code":23,"dataId":9,"value":0}]}
-]

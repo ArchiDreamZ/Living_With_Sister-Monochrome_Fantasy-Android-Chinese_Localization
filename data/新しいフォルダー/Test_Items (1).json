@@ -1,4 +1,0 @@
-[
-null,
-{"id":1,"animationId":41,"consumable":true,"damage":{"critical":false,"elementId":0,"formula":"0","type":0,"variance":20},"description":"","effects":[{"code":11,"dataId":0,"value1":0,"value2":500}],"hitType":0,"iconIndex":176,"itypeId":1,"name":"ポーション","note":"","occasion":0,"price":50,"repeats":1,"scope":7,"speed":0,"successRate":100,"tpGain":0}
-]
