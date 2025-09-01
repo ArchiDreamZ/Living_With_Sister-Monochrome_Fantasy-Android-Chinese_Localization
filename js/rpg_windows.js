@@ -2880,6 +2880,74 @@ Window_SavefileList.prototype.drawGameTitle = function(info, x, y, width) {
         str += info.jikan + '时　' + info.katagaki;
 
 		this.drawText(str, x, y + 50, width);
+        
+        //  セーブ画像を表示する
+        //　空をセット
+        var iconface = "2"
+        var iconidx = "4"
+        var iconflg = false
+
+        if(info.keikanissu >= 100 && iconflg == false){
+            if(info.dlchen == 0){
+                iconface = "1"
+                iconidx = "2"
+            }else{
+                iconface = "1"
+                iconidx = "4"
+            }
+            iconflg = true
+        }else if(info.keikanissu >= 85 && iconflg == false){
+            if(info.storyend == 0){
+                iconface = "1"
+                iconidx = "1"
+            }else{
+                iconface = "1"
+                iconidx = "4"
+            }
+            iconflg = true
+
+        }else if(info.keikanissu >= 64 && iconflg == false){
+                iconface = "2"
+                iconidx = "1"
+                iconflg = true
+
+        }else if(info.keikanissu >= 54 && iconflg == false){
+                iconface = "1"
+                iconidx = "5"
+                iconflg = true
+
+        }else if(info.keikanissu >= 44 && iconflg == false){
+                iconface = "1"
+                iconidx = "7"
+                iconflg = true
+
+        }else if(info.keikanissu >= 34 && iconflg == false){
+                iconface = "2"
+                iconidx = "0"
+                iconflg = true
+
+        }else if(info.keikanissu >= 26 && iconflg == false){
+                if(info.akatuki == 0){
+                    iconface = "1"
+                    iconidx = "3"
+                }else{
+                    iconface = "1"
+                    iconidx = "0"
+                }
+                iconflg = true
+
+        }else if(info.keikanissu >= 11 && iconflg == false){
+                iconface = "1"
+                iconidx = "6"
+                iconflg = true
+
+        }else{
+                iconface = "1"
+                iconidx = "6"
+                iconflg = true
+
+        }    
+        this.drawFace(iconface, iconidx, x + 500, y, 144, 144);
     }
 };
 

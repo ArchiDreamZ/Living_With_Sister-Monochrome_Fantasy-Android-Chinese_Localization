@@ -430,6 +430,12 @@ DataManager.makeSavefileInfo = function() {
 	info.keikanissu  = $gameVariables.value(160);
 	info.youbi  = $gameVariables.value(6);
 	info.jikan  = $gameVariables.value(4);
+    //セーブ画面の画像分岐
+    info.dlchen  = $gameVariables.value(1550);
+    info.storyend  = $gameVariables.value(492);
+    info.akatuki  = $gameVariables.value(1301);
+    info.onsen  = $gameVariables.value(494);
+
     return info;
 };
 
