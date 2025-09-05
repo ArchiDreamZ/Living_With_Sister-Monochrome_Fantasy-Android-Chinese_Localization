@@ -1,0 +1,25 @@
+Common Events Left (DLC  needs translation from 442 onward)
+282 -> Skipped for weekend
+283 -> Skipped for weekend
+326 -> Add in extra event for eating out on weekend
+408 -> Translation needed (Wet Dreams)
+439 -> Eating Out Flash images (worked in while working on 326)
+442 -> Onward -> Translation Needed
+
+Map Events
+Just Translations now?
+
+!!!!Reminders!!!!
+1. Label Point <- translate to match if needed
+2. DLC added to txt pathing!!!
+
+!!!Changes needed asap!!!
+1. Clothing states for show/watch mast match dress state if possible
+
+-Maybe changes later-
+1. If all pant found, occasionally no pant for show when ask
+2. Teach imouto how to 'do' it when alone
+3. Drinking for toilet using cunn images from 1.4
+
+-Things already added for release notes:
+1. Kasumi speech change after first time at beach, plus little bonus at end
