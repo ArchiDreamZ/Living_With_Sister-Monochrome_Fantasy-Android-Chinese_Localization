@@ -269,10 +269,14 @@ DataManager.isThisGameFile = function(savefileId) {
         if (StorageManager.isLocalMode()) {
             return true;
         } else {
+			/*
             var savefile = globalInfo[savefileId];
             return (savefile.globalId === this._globalId &&
                     savefile.title === $dataSystem.gameTitle);
-        }
+			*/
+            var savefile = globalInfo[savefileId];
+            return (savefile.globalId === this._globalId);
+			}
     } else {
         return false;
     }
