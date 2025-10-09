@@ -1,5 +1,5 @@
 # 妹相随：黑白世界的缤纷冒险-安卓-全彩绘版 中文精修与补充
-*（apk安装包下载请往下翻，查看“下载”章节）*
+*（apk安装包下载请往下翻，查看“[下载](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization?tab=readme-ov-file#%E4%B8%8B%E8%BD%BD)”章节）*
 ## 游戏信息
 该游戏在24年3月由神乐发行，上架到了Steam。Steam版中文名为：“妹相随：黑白世界的缤纷冒险”，英文名为“Living With SIster Monochrome Fantasy”
 
@@ -13,13 +13,13 @@
 
 **最新版本信息**
 
-截止至2025年8月，妹相随共有三个版本，分别为：DLsite的原作者发布版本、Steam的神乐发行版、HBOX的RPG Maker MV移植版。
+截止至2026年1月，妹相随共有三个版本，分别为：DLsite的原作者发布版本、Steam的神乐发行版、HBOX的RPG Maker MV移植版。
 
-**DLsite版**的本体版本为1.4.5（也被称为1.45），DLC版本为2.0.1。
+- **DLsite版**的本体版本为1.4.5（也被称为1.45），DLC版本为2.0.1。
 
-对应**Steam的神乐发行版**的本体版本为1.04，DLC版本为2.0.2。
+- 对应**Steam的神乐发行版**的本体版本为1.04，DLC版本为2.0.2。
 
-对应**HBOX的RPG Maker移植版**(含DLC)版本为1.2.5。
+- 对应**HBOX的移动端RPG Maker移植版**(含DLC)版本为1.2.5。
 
 最新更新情况可以在相关链接中去官网查看。
 
@@ -39,39 +39,53 @@ RPG Maker移植版-日文原版 (安卓/苹果)：[***HBOX***-妹！せいかつ
 
 RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“mario6714”翻译](https://mega.nz/file/XcVm3K6Z#ghfIBuihlTi4dhiWExAuCZBx2SAtXp2vJtEvVhNsnTU)
 
-国内其他安卓汉化版：[其他安卓汉化版（Don群友汉化版、巴图勇士版、滑稽酱版）](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki/%E5%A6%B9%E7%9B%B8%E9%9A%8F%E5%90%84%E6%B1%89%E5%8C%96%E7%89%88%E6%9C%AC%E6%B1%87%E6%80%BB#%E5%9B%BD%E5%86%85%E5%85%B6%E4%BB%96%E5%AE%89%E5%8D%93%E6%B1%89%E5%8C%96%E7%89%88)
+国内其他安卓汉化版：[其他安卓汉化版（Don群友汉化版、巴图勇士版、滑稽酱版、宁宁澄优化版）](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki/%E5%A6%B9%E7%9B%B8%E9%9A%8F%E5%90%84%E6%B1%89%E5%8C%96%E7%89%88%E6%9C%AC%E6%B1%87%E6%80%BB#%E5%9B%BD%E5%86%85%E5%85%B6%E4%BB%96%E5%AE%89%E5%8D%93%E6%B1%89%E5%8C%96%E7%89%88)
 
-更多链接与介绍：[妹相随所有相关链接汇总与介绍](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki)
+更多链接与介绍：[妹相随所有相关资源的汇总与介绍](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki)
 
-快捷入口：[神乐官方R18&汉化补丁](https://kagurafan.com/category/%e8%a1%a5%e4%b8%81/%e5%a6%b9%e7%9b%b8%e9%9a%8f%ef%bd%9e%e9%bb%91%e7%99%bd%e4%b8%96%e7%95%8c%e7%9a%84%e7%bc%a4%e7%ba%b7%e5%86%92%e9%99%a9%ef%bd%9edlc/) - [彩绘模组 Color Mod](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki/%E5%BD%A9%E7%BB%98%E7%9B%B8%E5%85%B3) - [狐娘模组 FFFox Mod](https://f95zone.to/threads/imouto-life-fantasy-fffox-mod.164340/) - [ApkHub](https://apkhub.cloud/) - [青桔网](https://qingjuacg.top/)
+快捷入口：[神乐官方R18&汉化补丁](https://kagurafan.com/category/%e8%a1%a5%e4%b8%81/%e5%a6%b9%e7%9b%b8%e9%9a%8f%ef%bd%9e%e9%bb%91%e7%99%bd%e4%b8%96%e7%95%8c%e7%9a%84%e7%bc%a4%e7%ba%b7%e5%86%92%e9%99%a9%ef%bd%9edlc/) - [彩绘贴图相关](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki/%E5%BD%A9%E7%BB%98%E7%9B%B8%E5%85%B3) - [狐娘模组 FFFox Mod](https://f95zone.to/threads/imouto-life-fantasy-fffox-mod.164340/) - [妹相随攻略](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/wiki/%E6%B8%B8%E6%88%8F%E6%94%BB%E7%95%A5) - [青桔网](https://qingjuacg.top/)
 
-## 仓库介绍
-该仓库为妹相随的RPG Maker引擎版（安卓）的精翻汉化项目，我将会以日文原版为基础，逐步精翻汉化；整合多个作者的彩绘贴图资源，同时发布彩绘版与黑白版；进行多种优化，尽可能做到更加流畅。最终做出一个精翻彩绘又流畅的版本。
+## 项目介绍
+该仓库为妹相随的RPG Maker引擎版（安卓）的精翻汉化项目，以日文原版为基础创建项目，参考Steam神乐官方汉化与Don的汉化，逐步完成精翻汉化；整合多个作者的彩绘贴图资源，同时发布黑白与彩绘版；进行多种优化，尽可能做到更加流畅。最终做出一个精翻彩绘又流畅的版本。
 
-①**精翻汉化**：该项目会参照Steam上神乐的官方翻译与Don的翻译，对所有文本进行精翻汉化。并将GUI界面、状态栏、夜晚互动按键、内裤图鉴、H场景的拟声词等图片，都替换为了神乐的汉化版图片。还用PS将汉化版图片与彩绘结合，做出既汉化又彩绘的贴图。
+①**精翻汉化**：该项目会参照Steam上神乐的官方翻译与Don的翻译，对所有文本进行精翻汉化。并将GUI界面、状态栏、夜晚互动按键、内裤图鉴、H场景的拟声词等图片，都替换为了神乐的汉化版图片。还用PS编辑图片，将汉化版图片与彩绘图片结合，做出既汉化又彩绘的贴图。
 
-②**彩绘贴图**：该项目添加并更新了彩绘，会同时发布彩绘版与黑白版。使用Daseson的[彩绘模组(Color Mod)](https://f95zone.to/threads/imouto-life-fantasy-color-mod-v0-84-steam-daseson.153385/) 的彩绘贴图，并持续同步更新到最新彩绘版本；还添加了国内画师“[一只马儿](https://www.pixiv.net/users/14933755/artworks)” 的更多的彩绘贴图，作为Daseson彩绘模组未绘制部分的补充。
+②**彩绘贴图**：该项目添加并更新了彩绘，会同时发布黑白版、彩绘版、幽夜彩绘优化版。而彩绘版本分为两种：彩绘版与幽夜彩绘优化版。
+- 普通的“**彩绘版**”就是大伙已经广泛使用的那个彩绘版本，主要使用Daseson的[彩绘模组(Color Mod)](https://f95zone.to/threads/imouto-life-fantasy-color-mod-v0-84-steam-daseson.153385/) 的彩绘贴图，并持续同步更新到最新彩绘版本；但我还为安卓版额外添加了国内画师“[一只马儿](https://www.pixiv.net/users/14933755/artworks)” 的更多的彩绘贴图，作为Daseson彩绘模组未绘制的夜袭部分等的补充。
+- “**幽夜彩绘优化版**”是由测试群群友“幽夜”在Daseson彩绘模组与“一只马儿”彩绘包的基础上，进行调色与重绘的新版彩绘包。在2024年8月15日正式发布了彩绘包1.0，发布于彼梦的安卓精翻测试群与Don的汉化群中。我为幽夜彩绘通过Github的[幽夜彩绘仓库分支](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/tree/YouYe_Color_ImagePack)进行了整理，修复了存在的问题，并将新彩图包进行一个正式发布。该彩绘包使用很广泛，很多人做的整合都使用了幽夜彩绘，以及安卓的巴图勇士DLC版与宁宁澄优化版也是，其中巴图勇士DLC版是将幽夜彩绘做了去色黑白处理来使用的。
 
 关于各个作者的彩绘贴图的详细信息，请查看上文的“相关链接”。
 
-注意：彩绘是导致卡顿的主要原因，由于引擎底层缺陷无法解决只能缓解，因此我对彩绘图片进行了有损压缩，来尽可能同时拥有彩绘和流畅。卡顿问题的原因详见下文。
+注意：彩绘图片体积过大是导致卡顿的最主要原因，由于引擎底层缺陷无法解决只能缓解，因此我对彩绘图片进行了有损压缩，来尽可能同时拥有彩绘和流畅。卡顿问题的原因详见下文。
 
 ③**黑白R18贴图**：
-黑白的日文原版含有马赛克，该项目的黑白版使用了mello.second的[未删改贴图补丁(Full Decensored Mod)](https://f95zone.to/threads/living-with-sister-monochrome-fantasy-steam-inusuku.104365/post-8132093) 去掉了马赛克。而Daseson彩绘模组也正是在mello.second的去码黑白贴图上进行上色重绘的。
+黑白的日文原版贴图含有马赛克，该项目的黑白版使用了Steam上的官方版神乐补丁中的去码贴图来去掉马赛克。该项目的旧版曾使用mello.second的个人版[未删改贴图补丁(Full Decensored Mod)](https://f95zone.to/threads/living-with-sister-monochrome-fantasy-steam-inusuku.104365/post-8132093) 中的去码贴图，但是他的版本的风格过于写实，与官方的卡通风格相差太多，于是我在新版本换为了神乐官方去码贴图。而Daseson彩绘模组也是在mello.second的去码黑白贴图上进行上色重绘的，但目前也在一步步替换为使用神乐补丁中的去码贴图进行重绘。
+
+更多有关黑白贴图的信息，请查看Wiki页面：[黑白去码补丁-Wiki](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/wiki/%E9%BB%91%E7%99%BD%E7%89%88%E5%8E%BB%E7%A0%81%E8%A1%A5%E4%B8%81)
 
 ④**优化**：
-原本我只是汉化，用别人的安装包作为基础，但无奈的是，巴图版安装包体积很大，看似是用模板构建的，里面有很多残留的冗余无用的模板内容，并且还有无用且碍事的按键；英文版安装包有着屏幕适配问题，无法全屏游玩；滑稽酱版内部结构几乎与英文版完全一样；Don群友汉化版是用的盗版打包器，玩一段时间就报错打不开了。
+原本我只是汉化，在最初的早期版本是用别人的安装包作为基础的，但无奈的是，巴图版安装包体积很大，是用模板构建的，里面有很多残留的冗余无用的模板内容，并且还有无用且碍事的按键；英文版安装包有着屏幕适配问题，无法全屏游玩；滑稽酱版的问题与内部结构几乎与英文版完全一样；Don群友汉化版是用的盗版打包器，玩一段时间就报错打不开了。
 
-因此我只好现学用Android Studio重新自己构建安装包，尽可能精简结构。并且删去了安装包里200mb的与妹相随无关的RPG Maker模板素材图片，减小安装包体积。
+因此我只好现学用Android Studio重新自己构建安装包，尽可能精简结构。后来群友“[清歌不尽](https://github.com/hss796)”与“[バカ野郎](https://github.com/Yunbierdika)”分别对旧的构建源码进行升级与重写，软件的兼容性得到了很大提高。
+
+并且我删去了日文原版里200mb多的与妹相随无关的RPG Maker模板素材图片、无用的.m4a音频文件与.jpg图片，减小安装包体积。我还为所有黑白与彩绘贴图都进行了图片有损压缩，减少了约300mb的体积，大幅增加流畅度。
+
+除了引擎上限与图片体积之外，还有一些卡顿的原因是因为HBOX公司的不当设置，例如锁帧20帧，未能调用显卡渲染等，这些我在“バカ野郎”的帮助下都进行了修改，进一步提高流畅度。
 
 ## 为什么创建这个项目？
 #### 当时国内汉化情况
 在此之前国内没有RPG Maker引擎的精翻汉化，当时有两个汉化版本：
 
-一个是加了彩绘贴图的巴图勇士汉化，翻译大部分为机翻，甚至少数部分没有翻译，很难接受；另一个是Don汉化群的群友汉化，是使用AI+人工润色，但很多地方翻译依然不准确，且掺杂了巨量的玩梗要素，非常难绷。
+一个是加了彩绘贴图的巴图勇士汉化，翻译大部分为机翻，甚至少数部分没有翻译，很难接受；另一个是Don汉化群的群友汉化，是使用AI+人工润色，但很多地方翻译依然不准确，且掺杂了巨量的玩梗要素，让人忍俊不禁非常难绷。
 
 #### 国内汉化后续与现状
-令人高兴的是，在HBOX于24年10月31日发布了含DLC的安卓版本之后，巴图勇士于11月16日发布了AI翻译+人工润色的含DLC的汉化版本。而不幸的是，在11月17日，我之前发布的原汉化专栏被锁定封禁，我只能重新发一个新的专栏。
+令人高兴的是，在HBOX公司于24年10月31日发布了含DLC的安卓版本之后，巴图勇士于11月16日发布了基于我的精翻汉化+巴图人工润色的含DLC的汉化版本。
+
+宁宁澄在巴图勇士DLC版之后，发布了宁宁澄优化版，其汉化用的是我项目的早期DLC机翻版。具体上是在我更新DLC汉化之前，内测群中的群友清歌不尽在我精翻汉化基础之上，对DLC部分进行机翻而诞生的早期机翻版。
+
+而不幸的是，在11月17日，我之前发布的原汉化专栏被锁定封禁，我只能重新发一个新的专栏。
+
+在2025年10月7日，我终于完成了DLC版精翻汉化的第一个预览版，并在B站发布了视频。
 
 #### 汉化原因
 我开始游玩时，下载了巴图勇士版，由于汉化与卡顿问题，感觉游戏体验很糟糕，于是自己动手替巴图精修一下稍微改善体验。但我在修改过程中意识到，这压根就不是小修一下就能解决的，绝大部分内容都是机翻。又逐渐发觉该手机版是HBOX移植的，发现了日文原版，且原版并没有那么卡顿，运行更流畅一些。
@@ -85,7 +99,7 @@ RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“m
 （为了得到更好的体验，我一直在不停修改，到现在都没玩上......😢）
 
 ## 汉化更新流程说明
-该仓库还未完成精修，会频繁更新，在群中内测。会分阶段发布预览版进行测试，历次改动说明可查看：[Commits](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/commits/main/) ，每次新的汉化版本发布时，也会将改动都总结在发布页内。
+该仓库还未完成精修，会频繁更新，在群中内测。会分阶段发布预览版进行测试，详细更新日志可查看：[Commits](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/commits/main/) ，每次新的汉化版本发布时，也会将改动都总结在发布页内。
 
 我使用Translator++翻译软件进行翻译，第一步我会先导入RPG Maker引擎已有的翻译作为参照，例如Don群友翻译和巴图勇士翻译。这样在发布预览版时，即使我没有精翻完毕也有备选翻译。
 
@@ -94,18 +108,20 @@ RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“m
 第三步我会进行润色，找出神乐汉化中不合适的部分，参照Don汉化的文本，融合出最终译本。
 
 #### 当前进度
-目前已经完成第一步，将“群友汉化”与“巴图汉化”导入到了Translator++用于参照与候补，现在正在一条条复制神乐汉化到Translator++中，并对比Don汉化来选出最终翻译。
+目前已经完成第一步并升级到DLC版本，完成了将“群友汉化”、“巴图汉化”、“巴图DLC版汉化”导入到Translator++用于参照与候补，现在正在一条条复制神乐汉化到Translator++中，并对比Don汉化来选出最终翻译。
 
 正在群中进行测试，958472475（非资源群，找资源禁止入群，资源在Github下载），欢迎参与测试反馈汉化问题。
 
 ## 下载
-目前从头重译的大工程还在进行中，但是为了让玩家们更早体验到部分精翻，因此我会先分阶段发布预览版。
+目前从头精翻重译的大工程仍在不断进行中，但是为了让玩家们更早体验到部分精翻，因此我会先分阶段发布预览版。若想关注后续更新进度请关注B站账号与Github。
 
 预览版会一直更新，最终成为完全精翻汉化版。
 
 在[Release](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/releases) 里下载最新发布的APK安装包即可。
 
-每次发布时，我还会在介绍信息的顶部放一个加速地址，若有网络问题下载缓慢可使用加速地址。或者手动在下载地址链接前面加上 “https://hub.gitmirror.com/” 作为前缀，即可使用[GitMirror](https://gitmirror.com/files.html) 的第三方代理加速下载。
+每次发布时，我还会在介绍信息的顶部放一个加速地址，若有网络问题下载缓慢可使用加速地址。或者手动在下载地址链接前面加上 “https://gh-proxy.org/” 作为前缀，即可使用[gh-proxy](https://gh-proxy.com/) 的第三方代理加速下载。
+
+*下载彩绘包、模组、PC版等其他资源，请浏览上文的“[相关链接](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization?tab=readme-ov-file#%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5)”章节*
 
 ## 操作说明
 **操作说明（触摸操作）：**
@@ -143,9 +159,9 @@ RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“m
 ## 卡顿问题
 游戏卡顿是RPG Maker引擎的通病，日文原版就有卡顿现象，体现为玩一段时间就变卡，图片素材越多卡的越快，推测为该引擎无法正常清理图片缓存。运行内存越多，卡顿现象越轻。
 
-这问题是引擎的底层问题，无法彻底解决，只能通过压缩图片质量进行缓解。
+该问题是引擎的底层问题，无法彻底解决，只能通过压缩图片质量进行缓解。也可以通过开启手机的游戏模式缓解，或者将妹相随放在后台静置一段时间再继续游戏，都有缓解卡顿的功能。
 
-也可以尝试使用JoiPlay加载游戏来缓解卡顿，将.apk后缀改为.zip解压，并使用JoiPlay加载assets文件夹下面的index.html文件。
+也可以尝试使用JoiPlay加载游戏来缓解卡顿，将.apk后缀改为.zip解压，并使用JoiPlay加载assets文件夹下面的index.html文件。（但该方法会无法使用作弊功能）
 
 ## 存档位置
 彼梦精翻版每次发布的新版本的APK都可以直接覆盖安装，无需卸载旧版本，更新后存档依然会保留。
@@ -175,11 +191,13 @@ RPG Maker移植版-英文翻译版（安卓）：[***F95Zone***-社区玩家“m
 
 可以在测试群中下载HBOX日文原版的RPG Maker工程文件，用于导入Translator++创建项目。然后在仓库代码区下载到彼梦精翻项目的T++工程文件，导入工程文件即可将当前汉化进度导入到你本地的Translator++。
 
-修改完汉化后，还需要处理按键丢失问题，详见：[按键丢失汇总](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_localization/wiki/%E6%B1%89%E5%8C%96%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98#%E6%8C%89%E9%94%AE%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98)。
-
 若要自行打包apk，可以直接用mt管理器打开彼梦精翻版的apk，然后替换文件再重新签名即可。
 
+更多有关妹相随的技术工具请浏览WIki页面：[妹相随相关技术工具](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/wiki/%E6%B1%89%E5%8C%96%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7)
+
 ## 当前问题、汉化过程与方法
+更多内容请浏览WIki页面：[汉化相关技术问题](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/wiki/%E6%B1%89%E5%8C%96%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98)
+
 ①**导入已有安卓版翻译**：我通过Translator++游戏翻译软件，从日文原版进行创建项目，然后快速将已有的Don群友汉化和巴图汉化导入作为对比参照。
 
 导入群友汉化时，我选择“对应代码物理地址翻译”来导入新的列，但发现有很多文本重复、缺失，导致大量错行错位，我只能手动一行一行对照，去将其对齐。这里推测为可能是他们翻译方法有问题，改动了部分代码内容，而在导入巴图汉化时未遇到此问题。
