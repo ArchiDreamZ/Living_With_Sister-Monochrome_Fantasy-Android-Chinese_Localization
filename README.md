@@ -1,5 +1,5 @@
 # 幽夜的优化版彩色包
-妹相随是一个热门游戏，详细游戏资料请在该仓库的[主分支](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization)与[Wiki](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/wiki)查看。妹相随有很多民间上色彩色包，用于将妹相随变为彩色版，而本页面是幽夜彩绘。
+妹相随是一个热门游戏，详细游戏资料请在该仓库的[主分支](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization)与[Wiki](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/wiki)查看。妹相随有很多民间上色彩色包，用于将妹相随变为彩色版，而本页面是幽夜彩绘。若想查看其他妹相随彩色包，请看：[WIki-彩绘相关](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/wiki/%E5%BD%A9%E7%BB%98%E7%9B%B8%E5%85%B3)
 
 *（下载幽夜彩绘请往下翻，查看“[下载与使用](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/tree/YouYe_Color_ImagePack?tab=readme-ov-file#%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8)”章节）*
 
@@ -54,10 +54,14 @@
 
 如果你想下载“幽夜彩绘-彼梦分支”，请点击：[幽夜彩绘-彼梦分支](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/archive/refs/heads/YouYe_Color_ImagePack-Archi_Fork.zip)
 
+（两者区别请看上文）
+
 如果下载缓慢，可尝试加速地址：[加速地址-幽夜彩绘](https://gh-proxy.org/https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/archive/refs/heads/YouYe_Color_ImagePack.zip) | [加速地址-彼梦分支](https://gh-proxy.org/https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/archive/refs/heads/YouYe_Color_ImagePack-Archi_Fork.zip)
 
 ### 使用方法：
-与其他妹相随彩色包使用方法相同，使用[Wolf RPG 解包工具](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/wiki/%E6%B1%89%E5%8C%96%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7#wolf-rpg-%E7%9B%B8%E5%85%B3)，将游戏目录中的.wolf文件解包并删除，然后将彩色包覆盖进去。
+与其他妹相随彩色包使用方法相同，使用[Wolf RPG 解包工具](https://github.com/ArchiDreamZ/Living_With_Sister-Monochrome_Fantasy-Android-Chinese_Localization/wiki/%E6%B1%89%E5%8C%96%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7#wolf-rpg-%E7%9B%B8%E5%85%B3)，将游戏目录中的.wolf文件解包（注意要勾选 Options → Overwrite existing extracted data 这一项），然后删除原.wolf文件，最后将彩色包覆盖进去。
+
+解包时，一定要勾选“Overwrite existing extracted data”，否则 UberWolf 会直接跳过已存在的文件夹，万一你有些文件夹里的文件不全，又得删除.wolf文件，那样游戏文件就缺失了。
 
 解包后，切记一定要删除原.wolf文件，因为游戏引擎会优先读取原.wolf文件，只有被删除后，才会选择读取解包后的文件，这样才会读取解包状态的彩色贴图。
 
