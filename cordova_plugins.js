@@ -9,16 +9,16 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-httpd.CorHttpd",
-      "file": "plugins/cordova-plugin-httpd/www/CorHttpd.js",
-      "pluginId": "cordova-plugin-httpd",
+      "id": "cordova-plugin-firebasex.FirebasePlugin",
+      "file": "plugins/cordova-plugin-firebasex/www/firebase.js",
+      "pluginId": "cordova-plugin-firebasex",
       "clobbers": [
-        "cordova.plugins.CorHttpd"
+        "FirebasePlugin"
       ]
     }
   ];
   module.exports.metadata = {
     "cordova-plugin-awesome-shared-preferences": "0.1.0",
-    "cordova-plugin-httpd": "0.9.3"
+    "cordova-plugin-firebasex": "19.1.0"
   };
 });

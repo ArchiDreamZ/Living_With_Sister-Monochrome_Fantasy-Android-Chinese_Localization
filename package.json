@@ -1,12 +1,12 @@
 {
-    "name": "",
+    "name": "rmmz-game",
     "main": "index.html",
-    "js-flags": "--expose-gc",
+    "chromium-args": "--force-color-profile=srgb",
     "window": {
-        "title": "",
-        "toolbar": false,
-        "width": 816,
-        "height": 624,
+        "title": "妹！せいかつ～ファンタジー～DLC",
+        "width": 1280,
+        "height": 720,
+        "position": "center",
         "icon": "icon/icon.png"
     }
 }

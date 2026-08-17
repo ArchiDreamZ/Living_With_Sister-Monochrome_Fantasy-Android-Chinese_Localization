@@ -3,7 +3,7 @@
 var $plugins =
 [
 {"name":"SA_CoreSpeedImprovement","status":true,"description":"v18.1 SA Core Speed Improvement (Define at the top)","parameters":{"Enable CWC-cache":"false","Minimum CWC-cache holding count":"15","Logging level":"4"}},
-{"name":"Community_Basic","status":true,"description":"基本的なパラメーターを設定するプラグインです。","parameters":{"cacheLimit":"60","screenWidth":"1024","screenHeight":"576","changeWindowWidthTo":"","changeWindowHeightTo":"","renderingMode":"auto","alwaysDash":"off","textSpeed":"1","autoSaveFileId":"0","errorMessage":"エラーが発生しました。ゲームの作者にご連絡ください。","showErrorDetail":"true","enableProgressBar":"true","maxRenderingFps":"20"}},
+{"name":"Community_Basic","status":true,"description":"基本的なパラメーターを設定するプラグインです。","parameters":{"cacheLimit":"60","screenWidth":"1024","screenHeight":"576","changeWindowWidthTo":"","changeWindowHeightTo":"","renderingMode":"webgl","alwaysDash":"off","textSpeed":"1","autoSaveFileId":"0","errorMessage":"エラーが発生しました。ゲームの作者にご連絡ください。","showErrorDetail":"true","enableProgressBar":"true","maxRenderingFps":"60"}},
 {"name":"EventDebugger","status":false,"description":"イベントデバッグプラグイン","parameters":{"ステップ開始":"F7","ステップイン":"F11","ステップオーバー":"F10","続行":"F6","表示切替":"F6","変数監視":"F1","監視最大数":"3","イベントテスト":"false","機能キー抑制":"false","OK動作":"F11","キャンセル動作":"F6","Ctrl同時押し":"false","Alt同時押し":"false","スクリプトデバッグ":"1","CTRLで無効化":"false"}},
 {"name":"gameEnd","status":true,"description":"このプラグインはタイトル画面にウィンドウを閉じるゲーム終了コマンドを追加します。","parameters":{"endName":"ゲーム終了"}},
 {"name":"Lunatlazur_ActorNameWindow","status":true,"description":"名前ウィンドウ表示プラグイン","parameters":{"テキストカラー":"0"}},
@@ -22,7 +22,7 @@ var $plugins =
 {"name":"Torigoya_SaveCommand","status":true,"description":"プラグインコマンドからセーブを実行できるようにします。","parameters":{}},
 {"name":"CustomizeErrorScreen","status":true,"description":"エラー画面表示改善プラグイン","parameters":{"メインメッセージ":"以下のエラーが発生しました。","ハイパーリンク":"","詳細情報出力":"ON"}},
 {"name":"GALV_MessageSoundEffects","status":true,"description":"Play sound effects when during Show Text event commands.","parameters":{"Delay Time":"5","Default Talk SE":"[SE]Action,80,100","Default Confirm SE":"[SE]Action,80,100","-----------":"","Quick SE 1":"","Quick SE 2":"","Quick SE 3":"","Quick SE 4":""}},
-{"name":"DataCacheBlocker","status":true,"description":"キャッシュを阻止します。（dataフォルダのみ）","parameters":{}},
+{"name":"DataCacheBlocker","status":false,"description":"キャッシュを阻止します。（dataフォルダのみ）","parameters":{}},
 {"name":"KRD_AndroidMain","status":true,"description":"This is the Android back button processing.","parameters":{}},
 {"name":"MadeWithMv","status":true,"description":"メイン画面へ進む前に、\"Made with MV\"のスプラッシュ画面もしくはカスタマイズされたスプラッシュ画面を表示します。","parameters":{"Show Made With MV":"true","Made with MV Image":"logo","Show Custom Splash":"true","Custom Image":"logo2","Fade Out Time":"30","Fade In Time":"30","Wait Time":"30"}},
 {"name":"DisableFastForward","status":true,"description":"イベント高速化禁止プラグイン","parameters":{}},
@@ -34,5 +34,5 @@ var $plugins =
 {"name":"UTA_CommonSave","status":true,"description":"共有のセーブデータを作成し、指定したスイッチ・変数の状態をセーブデータ間で共有します。","parameters":{"Target Switches":"","Target Variables":"1425-1441,1450-1463","Is Auto":"true","Auto on Gameover":"false","Show Trace":"false"}},
 {"name":"TitleImageChange","status":true,"description":"タイトル画面変更プラグイン","parameters":{"進行度変数":"499","優先度変数":"0","タイトル1の進行度":"1","タイトル1の画像":"TitleGraphic1","タイトル1のBGM":"nekomimi","タイトル2の進行度":"2","タイトル2の画像":"TitleGraphic2","タイトル2のBGM":"nekomimi","タイトル3の進行度":"3","タイトル3の画像":"TitleGraphic3","タイトル3のBGM":"nekomimi","以降の進行度":"4,5,6","以降の画像":"TitleGraphic4,TitleGraphic5,TitleGraphic6","以降のBGM":"nekomimi,nekomimi,White_Base"}},
 {"name":"UTA_MessageSkip","status":false,"description":"特定キーを押す事でメッセージをスキップできるようにします。","parameters":{"Skip Key":"control","Show Trace":"false"}},
-{"name":"VersionSpecified","status":true,"description":"【MMP ver.1.0】タイトル画面にバージョンを明記します。","parameters":{"version":"Version 1.2.5","fontSize":"20","fontColor":"rgb(255, 255, 255)","windowX":"800","windowY":"470"}}
+{"name":"VersionSpecified","status":true,"description":"【MMP ver.1.0】タイトル画面にバージョンを明記します。","parameters":{"version":"Version 1.2.8","fontSize":"20","fontColor":"rgb(255, 255, 255)","windowX":"800","windowY":"470"}}
 ];

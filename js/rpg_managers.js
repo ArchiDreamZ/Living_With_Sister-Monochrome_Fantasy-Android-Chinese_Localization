@@ -336,13 +336,13 @@ DataManager.maxSavefiles = function() {
 
 DataManager.saveGame = function(savefileId) {
     try {
-        StorageManager.backup(savefileId);
+        //StorageManager.backup(savefileId);
         return this.saveGameWithoutRescue(savefileId);
     } catch (e) {
         console.error(e);
         try {
             StorageManager.remove(savefileId);
-            StorageManager.restoreBackup(savefileId);
+            //StorageManager.restoreBackup(savefileId);
         } catch (e2) {
         }
         return false;
