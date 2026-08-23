@@ -3,7 +3,7 @@
 //=============================================================================
 /*:
  * @target MV MZ
- * @plugindesc 虚拟按键插件[MV/MZ通用][1.2.4]
+ * @plugindesc 虚拟按键插件[MV/MZ通用][1.3.2]
  * @author Qiu Jiu
  * @requiredAssets img/virtualButton
  * @requiredAssets img/virtualButton/line
@@ -80,6 +80,30 @@
  *   在按钮显示时可以让玩家无法通过点击地图来让角色自动移动，在按钮不显示时玩家可以通过点击地图来让角色自动移动。
  *   注意，此选项正常运行的前是插件参数“是否彻底取消点击移动”被设置为false。
  *
+ *11.移动方向和持续时间的数据获取：
+ *   对于其他按键，若设置了“按钮”属性并将“触碰数据”设置成“生成”后，则可获取数据:
+ *   按下该按键的持续时间，
+ *   以及按下该按键后拖动时，拖动结束点相对于按键中心的方向，
+ *   以及拖动结束点与按钮原位置中心的距离。
+ *   这些功能用于适配ARPG游戏。
+
+ *   获取持续时间，返回数字，代表时间，单位是帧：
+ *   Input.getPressTime(按键名)   
+ *   例如：
+ *   Input.getPressTime("ok")
+
+ *   获取拖动方向，返回数字，代表角度，顺时针，12点方向是0度，单位是度：
+ *   Input.getPressAngle(按键名)   
+ *   例如：
+ *   Input.getPressAngle("ok")
+
+ *   获取拖动距离，返回数字，代表拖动结束点与按钮原位置中心的距离，单位是像素：
+ *   Input.getPressDistance(按键名)   
+ *   例如：
+ *   Input.getPressDistance("ok")
+ *
+ *   在电脑端中，鼠标只有在按钮内部时该功能才起效，在移动端手指离开按钮时也起效。
+ *
  *=============================================================================
  *使用协议
  *=============================================================================
@@ -96,6 +120,27 @@
  *=============================================================================
  *更新日志
  *=============================================================================
+ *25-6-13 v1.3.2
+ *  1.彻底修复华为等设备中按钮图片偶尔未正常加载的问题。
+ *  2.修复上次更新导致的移动端摇杆控制错误问题。
+ *  3.修复多点触控问题。
+ *  4.增加普通按键长按时的功能数据获取。
+ *25-2-3 v1.3.0
+ *  1.修复在按键设置场景中，按键在游戏画面外时无法调整位置的问题。
+ *  2.优化拖动逻辑，移动按键时按键不会再突然偏移。
+ *  3.修复“固定按钮大小”时八方和四方移动按键显示位置未对齐的问题。
+ *25-2-2 v1.2.9
+ *  1.修复摇杆点击边缘时无法控制摇杆的问题。
+ *  2.修复用于rmmv工程时，华为设备中部分按钮图像的读取错误问题（Huawei Webview的bug）。
+ *24-11-3 v1.2.8
+ *  增加“是否可被玩家移动”的选项。
+ *24-11-3 v1.2.7
+ *  1.增加“固定按钮大小”的功能，可以让按键在不同移动端中的大小保持一致，不自动与游戏画面对准。
+ *  2.为四方移动按键增加各个按键的xy偏移功能。
+ *24-10-19 v1.2.6
+ *  修复“显示按键时屏蔽全部触屏”时无法调整虚拟按键位置的问题。
+ *24-10-18 v1.2.5
+ *  增加“显示按键时屏蔽全部触屏”的功能。
  *24-1-23 v1.2.4
  *  修复【更多显示条件】的错误。
  *23-10-15 v1.2.3
@@ -228,8 +273,13 @@
  * @type boolean
  * @text 控制键控制地图点击寻路
  * @desc 控制键控制点击移动。是否在显示按键时取消点击移动，不显示按键时恢复点击移动，注意，此选项正常运行的前是插件参数“是否彻底取消点击移动”被设置为false。
- * @on 控制
- * @off 控制
+ * @default false
+ * @parent controlButton
+ *
+ * @param controlButtonForbidAll
+ * @type boolean
+ * @text 显示按键时屏蔽全部触屏
+ * @desc 此功能为true时，若显示按键，则屏蔽原先游戏里全部的触屏。使用控制键关闭安静时，恢复触屏。
  * @default false
  * @parent controlButton
  *
@@ -312,6 +362,15 @@
  * @text 按钮公共事件执行场景
  * @desc 按钮公共事件执行场景。在什么场景内按下按键后可以执行按键绑定的公共事件，此参数主要是为了防止按钮在不恰当的地方执行公共事件而报错。
  * @default ["Scene_Map"]
+ * @parent chaos
+ *
+ * @param sizeStable
+ * @type boolean
+ * @text 固定按钮大小
+ * @on 固定
+ * @off 不固定
+ * @desc 固定按钮大小后，按钮大小不随设备改变而改变。
+ * @default false
  * @parent chaos
  *
 * @param optional
@@ -586,6 +645,23 @@
  * @desc 上键图片
  * @default 8
  *
+ * @param 8ex
+ * @text 上键额外设置
+ *
+ * @param 8x
+ * @type text
+ * @text 上键x偏移
+ * @desc sw:游戏画面宽度Screen Width。
+ * @default 0
+ * @parent 8ex
+ *
+ * @param 8y
+ * @type text
+ * @text 上键y偏移
+ * @desc sh:游戏画面高度Screen Height。
+ * @default 0
+ * @parent 8ex
+ *
  * @param 4
  * @type file
  * @dir img/virtualButton
@@ -593,6 +669,23 @@
  * @text 左键图片
  * @desc 左键图片
  * @default 4
+ *
+ * @param 4ex
+ * @text 左键额外设置
+ *
+ * @param 4x
+ * @type text
+ * @text 左键x偏移
+ * @desc sw:游戏画面宽度Screen Width。
+ * @default 0
+ * @parent 4ex
+ *
+ * @param 4y
+ * @type text
+ * @text 左键y偏移
+ * @desc sh:游戏画面高度Screen Height。
+ * @default 0
+ * @parent 4ex
  *
  * @param 6
  * @type file
@@ -602,6 +695,23 @@
  * @desc 右键图片
  * @default 6
  *
+ * @param 6ex
+ * @text 右键额外设置
+ *
+ * @param 6x
+ * @type text
+ * @text 右键x偏移
+ * @desc sw:游戏画面宽度Screen Width。
+ * @default 0
+ * @parent 6ex
+ *
+ * @param 6y
+ * @type text
+ * @text 右键y偏移
+ * @desc sh:游戏画面高度Screen Height。
+ * @default 0
+ * @parent 6ex
+ *
  * @param 2
  * @type file
  * @dir img/virtualButton
@@ -609,6 +719,23 @@
  * @text 下键图片
  * @desc 下键图片
  * @default 2
+ *
+ * @param 2ex
+ * @text 下键额外设置
+ *
+ * @param 2x
+ * @type text
+ * @text 下键x偏移
+ * @desc sw:游戏画面宽度Screen Width。
+ * @default 0
+ * @parent 2ex
+ *
+ * @param 2y
+ * @type text
+ * @text 下键y偏移
+ * @desc sh:游戏画面高度Screen Height。
+ * @default 0
+ * @parent 2ex
  *
 */
 /*~struct~dirButtonSettingMode1:
@@ -931,6 +1058,13 @@
  * @default 0
  * @parent pos
  *
+ * @param moveByPlayer
+ * @type boolean
+ * @text 是否可被玩家移动
+ * @desc 是否可被玩家移动
+ * @default true
+ * @parent pos
+ *
  * @param scale
  * @text 缩放设置
  *
@@ -1044,6 +1178,23 @@
  * @option 等待触发，上一次执行完后再按时再执行下一次
  * @value 2
  * @default 0
+ * @parent extra
+ *
+ * @param touchData
+ * @type boolean
+ * @text 触碰数据
+ * @desc 是否生成长按触碰数据，包括拖动角度和距离。
+ * @on 生成
+ * @off 不生成
+ * @default false
+ * @parent extra
+ *
+ * @param touchDataImg
+ * @type file
+ * @dir img/virtualButton
+ * @text 按钮摇杆图
+ * @desc 按钮摇杆图
+ * @default $circle1
  * @parent extra
  *
  *
@@ -1312,8 +1463,40 @@ const otherButtonSetting = eval(parameters["otherButtonSetting"]);
 const zIndex = Math.judgeAndOutAttribute(parameters["zIndex"],1000);
 const showOnPc = parameters["showOnPc"] === "true";
 const controlButtonDes = parameters["controlButtonDes"] === "true";
+const controlButtonForbidAll = parameters["controlButtonForbidAll"] === "true";
 const giveupVBConfigWhenVersionChange = parameters["giveupVBConfigWhenVersionChange"] === "true";
 const commonEventActiveScene = parameters["commonEventActiveScene"] ? JsonEx.parse(parameters["commonEventActiveScene"]) : ["Scene_Map"];
+const sizeStable = parameters["sizeStable"] === "true";
+//=============================================================================
+//
+//=============================================================================
+var normalJudge = false;//会改变
+//=============================================================================
+//
+//=============================================================================
+VB.x = {};
+VB.y = {};
+VB.syncGlobalXy = function(e) {
+    let x = 0,y = 0;
+    if (isMobilePhone) {
+        if (e.touches) {
+        	for (let touch of e.touches) {
+        		VB.x[touch.identifier] = touch.clientX / Graphics._realScale;
+        		VB.y[touch.identifier] = touch.clientY / Graphics._realScale;
+        	}
+        } else {
+            VB.x["mouse"] = (e.clientX || 0) / Graphics._realScale;
+            VB.y["mouse"] = (e.clientY || 0) / Graphics._realScale;
+        }
+    } else {
+        VB.x["mouse"] = (e.clientX || 0) / Graphics._realScale;
+        VB.y["mouse"] = (e.clientY || 0) / Graphics._realScale;
+    }
+};
+document.addEventListener('mousedown', VB.syncGlobalXy);
+document.addEventListener('mousemove', VB.syncGlobalXy);
+document.addEventListener('touchstart', VB.syncGlobalXy);
+document.addEventListener('touchmove', VB.syncGlobalXy);
 //=============================================================================
 //
 //=============================================================================
@@ -1364,7 +1547,9 @@ QJ.VB.setForBidTouchInputWhenPress = function(bool) {
 //=============================================================================
 $.TouchInput__onCancel = TouchInput._onCancel;
 TouchInput._onCancel = function(x, y) {
-    if (isMobilePhone && VB.forBidTwo) {
+	if (controlButtonForbidAll && VB.controlVisible) {
+		return;
+	} else if (isMobilePhone && VB.forBidTwo) {
         this._x = x;
         this._y = y;
         if (isMZ) {
@@ -1390,44 +1575,48 @@ Scene_Map.prototype.processMapTouch = function() {
 //=============================================================================
 //
 //=============================================================================
+
+//=============================================================================
+//
+//=============================================================================
 $.TouchInput__onTouchStart = TouchInput._onTouchStart;
 TouchInput._onTouchStart = function(event) {
-    if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+    if (normalJudge) {
         return;
     }
     $.TouchInput__onTouchStart.apply(this,arguments);
 };
 $.TouchInput__onTouchMove = TouchInput._onTouchMove;
 TouchInput._onTouchMove = function(event) {
-    if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+    if (normalJudge) {
         return;
     }
     $.TouchInput__onTouchMove.apply(this,arguments);
 };
 $.TouchInput__onTouchEnd = TouchInput._onTouchEnd;
 TouchInput._onTouchEnd = function(event) {
-    if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+    if (normalJudge) {
         return;
     }
     $.TouchInput__onTouchEnd.apply(this,arguments);
 };
 $.TouchInput__onTrigger = TouchInput._onTrigger;
 TouchInput._onTrigger = function(x, y) {
-    if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+    if (normalJudge) {
         return;
     }
     $.TouchInput__onTrigger.apply(this,arguments);
 };
 $.TouchInput__onMove = TouchInput._onMove;
 TouchInput._onMove = function(x, y) {
-    if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+    if (normalJudge) {
         return;
     }
     $.TouchInput__onMove.apply(this,arguments);
 };
 $.TouchInput__onRelease = TouchInput._onRelease;
 TouchInput._onRelease = function(x, y) {
-    if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+    if (normalJudge) {
         return;
     }
     $.TouchInput__onRelease.apply(this,arguments);
@@ -1438,7 +1627,7 @@ TouchInput._onRelease = function(x, y) {
 if (isMZ) {
     $.TouchInput__onHover = TouchInput._onHover;
     TouchInput._onHover = function(x, y) {
-        if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+        if (normalJudge) {
             return;
         }
         $.TouchInput__onHover.apply(this,arguments);
@@ -1446,12 +1635,60 @@ if (isMZ) {
 } else {
     $.TouchInput__onPointerDown = TouchInput._onPointerDown;
     TouchInput._onPointerDown = function(event) {
-        if (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) {
+        if (normalJudge) {
             return;
         }
         $.TouchInput__onPointerDown.apply(this,arguments);
     };
+	Bitmap.prototype._ensureCanvas = function() {
+	    this._canvas;
+	};
 }
+//=============================================================================
+//
+//=============================================================================
+$.Input_clear = Input.clear;
+Input.clear = function() {
+	$.Input_clear.call(this,arguments);
+    this._startPressCount = {};
+    this._pressAngle = {};
+    this._pressDistance = {};
+};
+Input.setPressVB = function(key,value) {
+	if (value) {
+		this.startPressVB(key);
+	} else {
+		this.endPressVB(key);
+	}
+};
+Input.startPressVB = function(key) {
+	if (this._currentState[key]) return;
+	this._currentState[key] = true;
+	this._startPressCount[key] = Graphics.frameCount;
+};
+Input.endPressVB = function(key) {
+	if (!this._currentState[key]) return;
+	this._currentState[key] = false;
+	//console.log(this.getPressTime(key));
+	delete this._startPressCount[key];
+};
+Input.getPressTime = function(key) {
+	return this._startPressCount[key]>0?Math.max(0,Graphics.frameCount - this._startPressCount[key]):0;
+};
+Input.setPressAngle = function(key,value) {
+	this._pressAngle[key] = value;
+	console.log("angle",key,value);
+};
+Input.setPressDistance = function(key,value) {
+	this._pressDistance[key] = value;
+	console.log("dis",key,value);
+};
+Input.getPressAngle = function(key) {
+	return this._pressAngle[key]||0;
+};
+Input.getPressDistance = function(key) {
+	return this._pressDistance[key]||0;
+};
 //=============================================================================
 //
 //=============================================================================
@@ -1700,6 +1937,7 @@ SceneManager.updateScene = function() {
 };
 SceneManager.updateVirtualButton = function() {
     if (!VB.readyVirtualButton) return;
+    normalJudge = (VB.forBidTouchInputWhenPress && VB.pressButtonTemp) || (controlButtonForbidAll && VB.controlVisible && SceneManager._scene && SceneManager._scene.constructor!==Scene_VBSetting);
     for (let button of VB.buttonList) {
         button.update();
     }
@@ -1812,7 +2050,17 @@ Game_VB_Base.prototype.loadImage = function(fileName) {
         bitmap._loadedVirtualButton = false;
         bitmap._remVirtualButtonName = fileName;
         bitmap._remVirtualButtonType = 0;
-        bitmap.addLoadListener(this.onLoadedImage.bind(this,bitmap));
+        bitmap.addLoadListener(()=>{
+        	//华为webview的bug，可能其他版本也有。
+        	//在drawImage后立马调用toDataURL会出错，此时图像可能还没有绘制完全，导致图像无法成功转换为base64。
+        	//所以这里等待20ms后再设置。
+        	bitmap._ensureCanvas();
+        	if (!bitmap.imageData) {
+	        	setTimeout(()=>{
+	        		VB.generateImageData(bitmap);
+	        	},10);
+        	}
+        });
         this._fileLoadList.push(bitmap);
     } else {
         let image = new Image();
@@ -1820,14 +2068,15 @@ Game_VB_Base.prototype.loadImage = function(fileName) {
         image._remVirtualButtonName = fileName;
         image._remVirtualButtonType = 1;
         image.src = "./" + loadUrl + fileName + ".png";
-        image.onload = this.onLoadedImage.bind(this,image);
+        image.onload = VB.generateImageData;
         this._fileLoadList.push(image);
     }
 };
-Game_VB_Base.prototype.onLoadedImage = function(data) {
+VB.generateImageData = function(data) {
+    if (data.imageData) return;
     let imageData = {};
     if (data._remVirtualButtonType === 0) {
-        imageData.url = data.canvas.toDataURL('image/png');
+    	imageData.url = data.canvas.toDataURL('image/png');
         imageData.width  = data.baseTexture.width;
         imageData.height = data.baseTexture.height;
         imageData.name = data._remVirtualButtonName;
@@ -1837,7 +2086,7 @@ Game_VB_Base.prototype.onLoadedImage = function(data) {
         imageData.height = data.height;
         imageData.name = data._remVirtualButtonName;
     }
-    this._fileLoadedList[data._remVirtualButtonName] = imageData;
+    data.imageData = imageData;
     data._loadedVirtualButton = true;
 };
 Game_VB_Base.prototype.update = function() {
@@ -1861,9 +2110,11 @@ Game_VB_Base.prototype.updateImageLoad = function() {
     } else {
         let isAllLoaded = true;
         for (let i of this._fileLoadList) {
-            if (i._loadedVirtualButton) {
-                //nothing
-            } else {
+        	if (this._fileLoadedList[i._remVirtualButtonName]) {
+        		//nothing
+        	} else if (i._loadedVirtualButton) {
+        		this._fileLoadedList[i._remVirtualButtonName] = i.imageData;
+        	} else {
                 isAllLoaded = false;
             }
         }
@@ -1892,7 +2143,7 @@ Game_VB_Base.prototype.buildDiv = function(name,imgName,url,w,h,posAuto) {
     div.style.userSelect = "none";
     //div.style["-webkit-user-select"]="none";
     div.style["-webkit-tap-highlight-color"] = "rgba(0,0,0,0)";
-    div.style["background-image"] = "url("+url+")";
+    div.style["background-image"] = "url('"+url+"')";
     div.style["background-repeat"] = "no-repeat";
     div.style["background-size"] = w+"px"+" "+h+"px";
     div.addEventListener('contextmenu',VB.contextmenuEvent);
@@ -1906,7 +2157,7 @@ Game_VB_Base.prototype.buildDiv = function(name,imgName,url,w,h,posAuto) {
 };
 Graphics.canvasToPageXVB = function(x,posAuto) {
     if (this._canvas) {
-        var left = this._canvas.offsetLeft;
+        const left = this._canvas.offsetLeft;
         x = this._realScale * x + left;
         if (posAuto[1]) x-=left;
         if (posAuto[2]) x+=left;
@@ -1917,11 +2168,33 @@ Graphics.canvasToPageXVB = function(x,posAuto) {
 };
 Graphics.canvasToPageYVB = function(y,posAuto) {
     if (this._canvas) {
-        var top = this._canvas.offsetTop;
+        const top = this._canvas.offsetTop;
         y = this._realScale * y + top;
         if (posAuto[0]) y-=top;
         if (posAuto[3]) y+=top;
         return Math.round(y);
+    } else {
+        return 0;
+    }
+};
+Graphics.pageToCanvasXVB = function(x,posAuto) {
+    if (this._canvas) {
+        const left = this._canvas.offsetLeft;
+        x = this._realScale * x - left;
+        if (posAuto[1]) x+=left;
+        if (posAuto[2]) x-=left;
+        return Math.round(x / this._realScale);
+    } else {
+        return 0;
+    }
+};
+Graphics.pageToCanvasYVB = function(y,posAuto) {
+    if (this._canvas) {
+        const top = this._canvas.offsetTop;
+        y = this._realScale * y - top;
+        if (posAuto[0]) y+=top;
+        if (posAuto[3]) y-=top;
+        return Math.round(y / this._realScale);
     } else {
         return 0;
     }
@@ -1943,13 +2216,12 @@ Graphics.offsetYVB = function(posAuto) {
     }
 };
 Game_VB_Base.prototype.refreshDivAttribute = function(div,visible,x,y,o,s,isPressed,extraData = {}) {
-    let graph = Graphics;
-    let systemScale = graph._realScale;
+    let systemScale = sizeStable?1:Graphics._realScale;
     let w = Math.floor(div.remVBWidth * s * systemScale) / 100;
     let h = Math.floor(div.remVBHeight * s * systemScale) / 100;
     let posAuto = div.posVBAuto;
-    x = graph.canvasToPageXVB(x,posAuto) - w * (extraData.ax||this._xAnchor) + (extraData.ox||0);
-    y = graph.canvasToPageYVB(y,posAuto) - h * (extraData.ay||this._yAnchor) + (extraData.oy||0);
+    x = Graphics.canvasToPageXVB(x,posAuto) - w * (extraData.ax||this._xAnchor) + (extraData.ox||0);
+    y = Graphics.canvasToPageYVB(y,posAuto) - h * (extraData.ay||this._yAnchor) + (extraData.oy||0);
     //===================================================================================
     if (div.remBVData["display"] !== visible) {
         div.remBVData["display"] = visible;
@@ -2043,9 +2315,10 @@ Game_VB_Base.prototype.isScriptVisible = function(vs) {
 };
 Game_VB_Base.prototype.updateShowOrHide = function() {
     if (VB.settingMode) {
-        this._visible = true;
+        this.updateSettingModeVisible();
         return;
     }
+    let lastResult = this._visible;
     let result = true;
     let vs = this._visibleSetting;
     if (vs.controlBy && !this.isControVisible(vs)) {result = false;}
@@ -2053,7 +2326,12 @@ Game_VB_Base.prototype.updateShowOrHide = function() {
     else if (!this.isTextHideVisible(vs))          {result = false;}
     else if (!this.isSwitchVisible(vs))            {result = false;}
     else if (!this.isScriptVisible(vs))            {result = false;}
-    this._visible = result;
+    if (lastResult!==result) {
+    	this._visible = result;
+    	if (!result) {
+    		this.clearAllPressData();
+    	}
+    }
 };
 Game_VB_Base.prototype.scriptIn = function() {
 	if (this.isPressed()) {
@@ -2068,9 +2346,6 @@ Game_VB_Base.prototype.scriptIn = function() {
             this.runCommonEvent("in",this._commonEventMode,this._commonEventIn);
         }
     }
-};
-Game_VB_Base.prototype.scriptMove = function() {
-    
 };
 Game_VB_Base.prototype.scriptOut = function() {
 	if (!this.isPressed()) {
@@ -2101,8 +2376,8 @@ Game_VB_Base.prototype.runCommonEvent = function(status,mode,id) {
             this._commonEventMode1List.push(interpreter);
         }
     } else if (mode===2) {
-    	if (!this._commonEventMode2Interprete) {
-    		this._commonEventMode2Interprete = new Game_Interpreter();
+    	if (!this._commonEventMode2Interpreter) {
+    		this._commonEventMode2Interpreter = new Game_Interpreter();
     	}
         if (!this._commonEventMode2Interpreter.isRunning()) {
             let ceData = $dataCommonEvents[id];
@@ -2141,35 +2416,111 @@ Game_VB_Base.prototype.updateCommonEvent = function() {
         }
     }
 };
-Game_VB_Base.prototype.getEventX = function(e) {
-    if (!e) return 0;
-    if (isMobilePhone) {
-        if (e.targetTouches&&e.targetTouches[0]) {
-            return e.targetTouches[0].clientX;
-        } else {
-            return e.clientX || 0;
-        }
-    } else {
-        return e.clientX || 0;
-    }
-};
-Game_VB_Base.prototype.getEventY = function(e) {
-    if (!e) return 0;
-    if (isMobilePhone) {
-        if (e.targetTouches&&e.targetTouches[0]) {
-            return e.targetTouches[0].clientY;
-        } else {
-            return e.clientY || 0;
-        }
-    } else {
-        return e.clientY || 0;
-    }
-};
 Game_VB_Base.prototype.clearAllPressData = function() {
 
 };
 Game_VB_Base.prototype.isPressed = function() {
     return false;
+};
+Game_VB_Base.prototype.updateSettingModeVisible = function() {
+	this._visible = true;
+};
+Game_VB_Base.prototype.clearAllSettingData = function() {
+    this._isSetting = false;
+    this._settingPressCount = 0;
+    this._settingPressed = false;
+    this._shakingCount = 0;
+    this._touchId = null;
+};
+Game_VB_Base.prototype.getSettingOffsetX = function(e) {
+    if (!e) return 0;
+    let value = 0;
+    if (isMobilePhone) {
+    	if (e.targetTouches) {
+    		value = e.targetTouches[0].clientX;
+    	} else {
+            value = e.clientX || 0;
+        }
+    } else {
+        value = e.clientX || 0;
+    }
+    return value / Graphics._realScale;
+};
+Game_VB_Base.prototype.getSettingOffsetY = function(e) {
+    if (!e) return 0;
+    let value = 0;
+    if (isMobilePhone) {
+    	if (e.targetTouches) {
+    		value = e.targetTouches[0].clientY;
+    	} else {
+            value = e.clientY || 0;
+        }
+    } else {
+        value = e.clientY || 0;
+    }
+    return value / Graphics._realScale;
+};
+Game_VB_Base.prototype.updateVBSettingMode = function(type,e) {
+	if (type===0) {
+        for (let i of VB.buttonList) {
+            if (i!==this) {
+            	i.clearAllSettingData();
+            }
+        }
+        this._isSetting = true;
+        this._settingPressed = true;
+        this._moveOffsetX = this._saveData.x - this.getSettingOffsetX(e);
+        this._moveOffsetY = this._saveData.y - this.getSettingOffsetY(e);
+	} else if (type===1) {
+		//nothing
+	} else if (type===2) {
+        this._settingPressed = false;
+	}
+};
+Game_VB_Base.prototype.getGlobalX = function() {
+	return VB.x[this._touchId]||VB.x["mouse"]||0;
+};
+Game_VB_Base.prototype.getGlobalY = function() {
+	return VB.y[this._touchId]||VB.y["mouse"]||0;
+};
+Game_VB_Base.prototype.updateSetting = function() {
+	if (!this._isSetting) return;
+    this._shakingCount++;
+    if (this._settingPressed) {
+        if (this._settingPressCount>10) {
+        	console.log(this._touchId);
+            this._saveData.x = Math.floor(this.getGlobalX() + this._moveOffsetX);
+            this._saveData.y = Math.floor(this.getGlobalY() + this._moveOffsetY);
+        } else if (this._settingPressCount>0) {
+            this._settingPressCount++;
+        } else {
+            this._settingPressCount = 1;
+        }
+    } else {
+        this._settingPressCount = 0;
+    }
+};
+Game_VB_Base.prototype.getProperOpacity = function(opacity) {
+    if (this._isSetting) {
+        let time = 40;
+        let turn = this._shakingCount%time;
+        let opacityRate = Math.abs(time/2-turn)/(time/2);
+        return Math.round(opacity*opacityRate);
+    } else {
+        return opacity;
+    }
+};
+Game_VB_Base.prototype.startSetting = function() {
+    this.clearAllPressData();
+};
+Game_VB_Base.prototype.endSetting = function() {
+   	this.clearAllSettingData();
+    this.confirmBaseSaveData();
+};
+Game_VB_Base.prototype.dealTouchId = function(e) {
+   	if (e.type==="touchstart") {
+   		this._touchId = e.changedTouches[0].identifier;
+   	}
 };
 //=============================================================================
 //
@@ -2185,42 +2536,71 @@ Game_VB_Normal.prototype.constructor = Game_VB_Normal;
 Game_VB_Normal.prototype.loadButtonBaseSetting = function() {
     Game_VB_Base.prototype.loadButtonBaseSetting.call(this);
     this._setting = JsonEx.parse(this._buttonId === -1 ? parameters["controlButtonSetting"] : otherButtonSetting[this._buttonId]);
+    this._touchData = !(this._setting["touchData"]!=="true");
+    this._touchImg = this._setting["touchDataImg"]||null;
 };
 Game_VB_Normal.prototype.loadFiles = function() {
     Game_VB_Base.prototype.loadFiles.call(this);
     this.loadImage(this._setting.img);
+    if (this._touchData && this._touchImg) {
+    	this.loadImage(this._touchImg);
+    }
 };
 Game_VB_Normal.prototype.createButtonElement = function() {
     Game_VB_Base.prototype.createButtonElement.call(this);
     let divData = this._fileLoadedList[this._setting.img];
     let div = this.buildDiv("o"+this._buttonId,divData.name,divData.url,divData.width,divData.height,this._posAuto);
     div.addEventListener('mousedown',this.startTouch.bind(this));
-    div.addEventListener('mousemove',this.moveTouch.bind(this));
+    div.addEventListener('mousemove',this.touchMove.bind(this));
     div.addEventListener('mouseup',this.endTouch.bind(this));
+    div.addEventListener('mouseout',this.endTouch.bind(this));
     div.addEventListener('touchstart',this.startTouch.bind(this));
-    div.addEventListener('touchmove',this.moveTouch.bind(this));
+    div.addEventListener('touchmove',this.touchMove.bind(this));
     div.addEventListener('touchend',this.endTouch.bind(this));
     div.addEventListener('touchcancel',this.endTouch.bind(this));
     document.body.appendChild(div);
     this._div = div;
+    //==========================================
+    if (this._touchData && this._touchImg) {
+	    let divData = this._fileLoadedList[this._touchImg];
+	    let touchDiv = this.buildDiv("o"+this._buttonId+"touch",divData.name,divData.url,divData.width,divData.height,this._posAuto);
+	    touchDiv.style["-webkit-user-select"]="none";
+	    touchDiv.style["pointer-events"]="none";
+	    document.body.appendChild(touchDiv);
+	    this._touchDiv = touchDiv;
+    } else {
+    	this._touchDiv = null;
+    }
+    //==========================================
     this.clearAllPressData();
 };
 Game_VB_Normal.prototype.startTouch = function(e) {
     e.preventDefault();
+    this.dealTouchId(e);
     if (VB.settingMode) {
-        this.updateVBSettingMode(0,this.getEventX(e),this.getEventY(e));
+        this.updateVBSettingMode(0,e);
     } else {
         this.scriptIn();
         this._isPressed = true;
         this.updateInput();
+        this.touchMove(e);
     }
 };
-Game_VB_Normal.prototype.moveTouch = function(e) {
+Game_VB_Normal.prototype.touchMove = function(e) {
+	if (!this._isPressed || !this._setting["button"] || !this._touchData) return;
+	let rect = this._boundsRect;
+	if (!rect) return;
     e.preventDefault();
-    if (VB.settingMode) {
-        this.updateVBSettingMode(1,this.getEventX(e),this.getEventY(e));
+    if (isMobilePhone) {
+    	let dx = this.getGlobalX()*Graphics._realScale-rect.x-rect.w/2;
+    	let dy = this.getGlobalY()*Graphics._realScale-rect.y-rect.h/2;
+    	Input.setPressDistance(this._setting["button"],Math.sqrt(dx*dx+dy*dy));
+    	Input.setPressAngle(this._setting["button"],(Math.atan2(dy,dx)*180/Math.PI+360+90)%360);
     } else {
-        this.scriptMove();
+    	let dx = this.getGlobalX()*Graphics._realScale-rect.x-rect.w/2;
+    	let dy = this.getGlobalY()*Graphics._realScale-rect.y-rect.h/2;
+    	Input.setPressDistance(this._setting["button"],Math.sqrt(dx*dx+dy*dy));
+    	Input.setPressAngle(this._setting["button"],(Math.atan2(dy,dx)*180/Math.PI+360+90)%360);
     }
 };
 /*
@@ -2234,12 +2614,12 @@ this._cancelEventDelay:
 Game_VB_Normal.prototype.endTouch = function(e) {
     e.preventDefault();
     if (VB.settingMode) {
-        this.updateVBSettingMode(2,this.getEventX(e),this.getEventY(e));
+        this.updateVBSettingMode(2,e);
     } else {
         this._cancelEventDelay = e;
     }
 };
-Game_VB_Base.prototype.updateCancelDelay = function() {
+Game_VB_Normal.prototype.updateCancelDelay = function() {
     if (this._cancelEventDelay) {
         this._cancelEventDelay = null;
         this.clearAllPressData();
@@ -2248,20 +2628,40 @@ Game_VB_Base.prototype.updateCancelDelay = function() {
 Game_VB_Normal.prototype.clearAllPressData = function() {
     this.scriptOut();
     this._isPressed = false;
+    this._touchId = null;
     this.updateInput();
 };
 Game_VB_Normal.prototype.updateInput = function() {
     let buttonName = this._setting["button"];
     if (buttonName) {
-        Input._currentState[buttonName] = this._isPressed;
+    	Input.setPressVB(buttonName,this._isPressed);
     }
 };
 Game_VB_Normal.prototype.updateBaseData = function() {
     let data = this._saveData;
-    this.refreshDivAttribute(this._div,this._visible,data.x,data.y,this.getProperOpacity(data.opacity),data.scale,this._isPressed);
+    this._boundsRect = this.refreshDivAttribute(this._div,this._visible,data.x,data.y,this.getProperOpacity(data.opacity),data.scale,this._isPressed);
+    if (this._touchDiv) {
+    	if (this._isPressed) {
+	    	let x = Graphics.pageToCanvasXVB(this.getGlobalX(),this._div.posVBAuto);
+	    	let y = Graphics.pageToCanvasYVB(this.getGlobalY(),this._div.posVBAuto);
+	    	this.refreshDivAttribute(this._touchDiv,this._visible,x,y,this.getProperOpacity(data.opacity),data.scale,this._isPressed,{ax:0.5,ay:0.5,ox:0,oy:0});
+    	} else {
+	    	let padHalfWidth = this._boundsRect.w*(0.5-this._xAnchor);
+	        let padHalfHeight = this._boundsRect.h*(0.5-this._yAnchor);
+	    	this.refreshDivAttribute(this._touchDiv,this._visible,data.x,data.y,this.getProperOpacity(data.opacity),data.scale,this._isPressed,
+	    		{ax:0.5,ay:0.5,ox:padHalfWidth,oy:padHalfHeight});
+    	}
+    }
 };
 Game_VB_Normal.prototype.isPressed = function() {
     return this._isPressed;
+};
+Game_VB_Normal.prototype.updateSettingModeVisible = function() {
+	if (VB.settingMode) {
+		this._visible = this._setting.moveByPlayer!=="false";
+	} else {
+		Game_VB_Base.prototype.updateSettingModeVisible.call(this);
+	}
 };
 //=============================================================================
 //
@@ -2402,13 +2802,14 @@ Game_VB_Dir.prototype.getDirMode = function() {
     return this._dirMode;
 };
 Game_VB_Dir.prototype.clearAllPressData = function() {
+    this._touchId = null;
     this.clearAllPressDataMode0();
     this.clearAllPressDataMode1();
     this.clearAllPressDataMode2();
-    Input._currentState['down'] = false;
-    Input._currentState['left'] = false;
-    Input._currentState['right'] = false;
-    Input._currentState['up'] = false;
+    Input.setPressVB('down',false);
+    Input.setPressVB('left',false);
+    Input.setPressVB('right',false);
+    Input.setPressVB('up',false);
 };
 Game_VB_Dir.prototype.updateBaseData = function() {
     switch(this._dirMode) {
@@ -2449,12 +2850,13 @@ Game_VB_Dir.prototype.createDivMode0 = function() {
         div = this.buildDiv("m0"+i,divData.name,divData.url,divData.width,divData.height,this._posAuto);
         div.remIndexVB = i;
         div.addEventListener('mousedown',this.startTouchMode0.bind(this));
-        div.addEventListener('mousemove',this.moveTouchMode0.bind(this));
         div.addEventListener('mouseup',this.endTouchMode0.bind(this));
+    	div.addEventListener('mouseout',this.endTouchMode0.bind(this));
         div.addEventListener('touchstart',this.startTouchMode0.bind(this));
-        div.addEventListener('touchmove',this.moveTouchMode0.bind(this));
         div.addEventListener('touchend',this.endTouchMode0.bind(this));
         div.addEventListener('touchcancel',this.endTouchMode0.bind(this));
+        div.oxIndex = -(9-i)%3;
+        div.oyIndex = Math.floor((9-i)/3)-2;
         this._mode0ElementList.push(div);
     }
     this._mode0ElementPress = [null,false,false,false,false,false,false,false,false,false];
@@ -2467,17 +2869,23 @@ Game_VB_Dir.prototype.updateMode0 = function() {
     let data = this._saveData;
     let x = data.x;
     let y = data.y;
+    let mode0Setting = this._dirImageSetting[0];
+    let deviceScaleRevert = sizeStable?(1/Graphics._realScale):1;
     for (let i=2,posI;i<=8;i+=2) {
-        this.refreshDivAttribute(list[i/2-1],this._visible,
-            x+(  (-(9-i)%3)              +  (1-this._xAnchor)*2  )*(list[i/2-1].remVBWidth*data.scale/100),
-            y+(  (Math.floor((9-i)/3)-2) +  (1-this._yAnchor)*2  )*(list[i/2-1].remVBHeight*data.scale/100),
+    	let div = list[i/2-1];
+    	let ox = Number(mode0Setting[i+"x"]||0);
+    	let oy = Number(mode0Setting[i+"y"]||0);
+        this.refreshDivAttribute(div,this._visible,
+            ox+x+(div.oxIndex + (1-this._xAnchor)*2)*(div.remVBWidth*deviceScaleRevert*data.scale/100),
+            oy+y+(div.oyIndex + (1-this._yAnchor)*2)*(div.remVBHeight*deviceScaleRevert*data.scale/100),
             this.getProperOpacity(data.opacity),data.scale,this._mode0ElementPress[i]);
     }
 };
 Game_VB_Dir.prototype.startTouchMode0 = function(e) {
     e.preventDefault();
+    this.dealTouchId(e);
     if (VB.settingMode) {
-        this.updateVBSettingMode(0,this.getEventX(e),this.getEventY(e));
+        this.updateVBSettingMode(0,e);
     } else {
         this.scriptIn();
         let div = e.target;
@@ -2485,18 +2893,10 @@ Game_VB_Dir.prototype.startTouchMode0 = function(e) {
         this.updateInputMode0(index,true);
     }
 };
-Game_VB_Dir.prototype.moveTouchMode0 = function(e) {
-    e.preventDefault();
-    if (VB.settingMode) {
-        this.updateVBSettingMode(1,this.getEventX(e),this.getEventY(e));
-    } else {
-        this.scriptMove();
-    }
-};
 Game_VB_Dir.prototype.endTouchMode0 = function(e) {
     e.preventDefault();
     if (VB.settingMode) {
-        this.updateVBSettingMode(2,this.getEventX(e),this.getEventY(e));
+        this.updateVBSettingMode(2,e);
     } else {
         this._cancelEventDelay = e;
         this._cancelEventMode = 0;
@@ -2505,13 +2905,13 @@ Game_VB_Dir.prototype.endTouchMode0 = function(e) {
 Game_VB_Dir.prototype.updateInputMode0 = function(index,status) {
     this._mode0ElementPress[index] = status;
     if (index===2) {
-        Input._currentState['down']=status;
+	    Input.setPressVB('down',status);
     } else if (index===4) {
-        Input._currentState['left']=status;
+	    Input.setPressVB('left',status);
     } else if (index===6) {
-        Input._currentState['right']=status;
+	    Input.setPressVB('right',status);
     } else if (index===8) {
-        Input._currentState['up']=status;
+	    Input.setPressVB('up',status);
     }
 };
 //=======================================================================================================
@@ -2524,12 +2924,13 @@ Game_VB_Dir.prototype.createDivMode1 = function() {
         div = this.buildDiv("m1"+i,divData.name,divData.url,divData.width,divData.height,this._posAuto);
         div.remIndexVB = i;
         div.addEventListener('mousedown',this.startTouchMode1.bind(this));
-        div.addEventListener('mousemove',this.moveTouchMode1.bind(this));
         div.addEventListener('mouseup',this.endTouchMode1.bind(this));
+    	div.addEventListener('mouseout',this.endTouchMode1.bind(this));
         div.addEventListener('touchstart',this.startTouchMode1.bind(this));
-        div.addEventListener('touchmove',this.moveTouchMode1.bind(this));
         div.addEventListener('touchend',this.endTouchMode1.bind(this));
         div.addEventListener('touchcancel',this.endTouchMode1.bind(this));
+        div.oxIndex = -(9-i)%3;
+        div.oyIndex = Math.floor((9-i)/3)-2;
         this._mode1ElementList.push(div);
     }
     this._mode1ElementPress = [null,false,false,false,false,false,false,false,false,false];
@@ -2542,17 +2943,20 @@ Game_VB_Dir.prototype.updateMode1 = function() {
     let data = this._saveData;
     let x = data.x;
     let y = data.y;
+    let deviceScaleRevert = sizeStable?(1/Graphics._realScale):1;
     for (let i=1,posI,w,h;i<=9;i++) {
-        this.refreshDivAttribute(list[i-1],this._visible,
-            x+(  (-(9-i)%3)              +  (1-this._xAnchor)*2  )*(list[i-1].remVBWidth*data.scale/100),
-            y+(  (Math.floor((9-i)/3)-2) +  (1-this._yAnchor)*2  )*(list[i-1].remVBHeight*data.scale/100),
+    	let div = list[i-1];
+        this.refreshDivAttribute(div,this._visible,
+            x+(div.oxIndex + (1-this._xAnchor)*2)*(div.remVBWidth*deviceScaleRevert*data.scale/100),
+            y+(div.oyIndex + (1-this._yAnchor)*2)*(div.remVBHeight*deviceScaleRevert*data.scale/100),
             this.getProperOpacity(data.opacity),data.scale,this._mode1ElementPress[i]);
     }
 };
 Game_VB_Dir.prototype.startTouchMode1 = function(e) {
     e.preventDefault();
+    this.dealTouchId(e);
     if (VB.settingMode) {
-        this.updateVBSettingMode(0,this.getEventX(e),this.getEventY(e));
+        this.updateVBSettingMode(0,e);
     } else {
         this.scriptIn();
         let div = e.target;
@@ -2560,18 +2964,10 @@ Game_VB_Dir.prototype.startTouchMode1 = function(e) {
         this.updateInputMode1(index,true);
     }
 };
-Game_VB_Dir.prototype.moveTouchMode1 = function(e) {
-    e.preventDefault();
-    if (VB.settingMode) {
-        this.updateVBSettingMode(1,this.getEventX(e),this.getEventY(e));
-    } else {
-        this.scriptMove();
-    }
-};
 Game_VB_Dir.prototype.endTouchMode1 = function(e) {
     e.preventDefault();
     if (VB.settingMode) {
-        this.updateVBSettingMode(2,this.getEventX(e),this.getEventY(e));
+        this.updateVBSettingMode(2,e);
     } else {
         this._cancelEventDelay = e;
         this._cancelEventMode = 1;
@@ -2580,54 +2976,52 @@ Game_VB_Dir.prototype.endTouchMode1 = function(e) {
 Game_VB_Dir.prototype.updateInputMode1 = function(index,status) {
     this._mode1ElementPress[index] = status;
     if (index===2) {
-        Input._currentState['down']=status;
+	    Input.setPressVB('down',status);
     } else if (index===4) {
-        Input._currentState['left']=status;
+	    Input.setPressVB('left',status);
     } else if (index===6) {
-        Input._currentState['right']=status;
+	    Input.setPressVB('right',status);
     } else if (index===8) {
-        Input._currentState['up']=status;
+	    Input.setPressVB('up',status);
     } else if (index===1) {
-        Input._currentState['down']=status;
-        Input._currentState['left']=status;
+	    Input.setPressVB('down',status);
+	    Input.setPressVB('left',status);
     } else if (index===3) {
-        Input._currentState['down']=status;
-        Input._currentState['right']=status;
+	    Input.setPressVB('down',status);
+	    Input.setPressVB('right',status);
     } else if (index===7) {
-        Input._currentState['up']=status;
-        Input._currentState['left']=status;
+	    Input.setPressVB('up',status);
+	    Input.setPressVB('left',status);
     } else if (index===9) {
-        Input._currentState['up']=status;
-        Input._currentState['right']=status;
+	    Input.setPressVB('up',status);
+	    Input.setPressVB('right',status);
     }
 };
 //=======================================================================================================
 Game_VB_Dir.prototype.createDivMode2 = function() {
+	//*********************************摇杆不加mouseout=========================
     if (this._mode2ElementList) return;
     this._mode2ElementList = [];
     //先2后1，让2在下面。
     let divData,div;
     //======================================================================
+    //0 底板
     divData = this._fileLoadedList[this._dirImageSetting[2]["c2"]];
     div = this.buildDiv("m2c2",divData.name,divData.url,divData.width,divData.height,this._posAuto);
     div.addEventListener('mousedown',this.startTouchMode2.bind(this));
-    div.addEventListener('mousemove',this.moveTouchMode2.bind(this));
     div.addEventListener('mouseup',this.endTouchMode2.bind(this));
-    div.addEventListener('mouseout',this.outTouchMode2.bind(this));
     div.addEventListener('touchstart',this.startTouchMode2.bind(this));
-    div.addEventListener('touchmove',this.moveTouchMode2.bind(this));
     div.addEventListener('touchend',this.endTouchMode2.bind(this));
     div.addEventListener('touchcancel',this.endTouchMode2.bind(this));
+    div.isPadDiv = true;
     this._mode2ElementList.push(div);
     //======================================================================
+    //1 摇杆
     divData = this._fileLoadedList[this._dirImageSetting[2]["c1"]];
     div = this.buildDiv("m2c1",divData.name,divData.url,divData.width,divData.height,this._posAuto);
     div.addEventListener('mousedown',this.startTouchMode2.bind(this));
-    div.addEventListener('mousemove',this.moveTouchMode2.bind(this));
     div.addEventListener('mouseup',this.endTouchMode2.bind(this));
-    div.addEventListener('mouseout',this.outTouchMode2.bind(this));
     div.addEventListener('touchstart',this.startTouchMode2.bind(this));
-    div.addEventListener('touchmove',this.moveTouchMode2.bind(this));
     div.addEventListener('touchend',this.endTouchMode2.bind(this));
     div.addEventListener('touchcancel',this.endTouchMode2.bind(this));
     this._mode2ElementList.push(div);
@@ -2635,47 +3029,18 @@ Game_VB_Dir.prototype.createDivMode2 = function() {
 };
 Game_VB_Dir.prototype.startTouchMode2 = function(e) {
     e.preventDefault();
+    this.dealTouchId(e);
     if (VB.settingMode) {
-        this.updateVBSettingMode(0,this.getEventX(e),this.getEventY(e));
+    	this.updateVBSettingMode(0,e);
     } else {
         this.scriptIn();
-        let graph = Graphics;
-        this._mode2X = graph.pageToCanvasX(this.getEventX(e));
-        this._mode2Y = graph.pageToCanvasY(this.getEventY(e));
-        this._repairXMode2 = -graph.offsetXVB(this._mode2ElementList[1].posVBAuto);
-        this._repairYMode2 = -graph.offsetYVB(this._mode2ElementList[1].posVBAuto);
         this._mode2Press = true;
-        this.updateInputMode2Calculate();
-    }
-};
-Game_VB_Dir.prototype.moveTouchMode2 = function(e) {
-    e.preventDefault();
-    if (VB.settingMode) {
-        this.updateVBSettingMode(1,this.getEventX(e),this.getEventY(e));
-    } else {
-        if (this._mode2Press) {
-            let graph = Graphics;
-            this._mode2X = graph.pageToCanvasX(this.getEventX(e));
-            this._mode2Y = graph.pageToCanvasY(this.getEventY(e));
-            this._repairXMode2 = -graph.offsetXVB(this._mode2ElementList[1].posVBAuto);
-            this._repairYMode2 = -graph.offsetYVB(this._mode2ElementList[1].posVBAuto);
-            this.updateInputMode2Calculate();
-        }
-        this.scriptMove();
-    }
-};
-Game_VB_Dir.prototype.outTouchMode2 = function(e) {
-    e.preventDefault();
-    if (VB.settingMode) {
-        //nothing
-    } else {
-        this.endTouchMode2(e);
     }
 };
 Game_VB_Dir.prototype.endTouchMode2 = function(e) {
     e.preventDefault();
     if (VB.settingMode) {
-        this.updateVBSettingMode(2,this.getEventX(e),this.getEventY(e));
+        this.updateVBSettingMode(2,e);
     } else {
         this._cancelEventDelay = e;
         this._cancelEventMode = 2;
@@ -2684,28 +3049,33 @@ Game_VB_Dir.prototype.endTouchMode2 = function(e) {
 Game_VB_Dir.prototype.clearAllPressDataMode2 = function() {
     this._mode2X = null;
     this._mode2Y = null;
-    this._repairXMode2 = null;
-    this._repairYMode2 = null;
     this._mode2Press = false;
 };
 Game_VB_Dir.prototype.updateMode2 = function() {
     let data = this._saveData;
     let padData = this.refreshDivAttribute(this._mode2ElementList[0],this._visible,data.x,data.y,this.getProperOpacity(data.opacity),data.scale,this._mode2Press);
-    if (this._mode2X === null) {
+    if (this._mode2Press) {
+    	let x = Graphics.pageToCanvasXVB(this.getGlobalX(),this._mode2ElementList[1].posVBAuto);
+    	let y = Graphics.pageToCanvasYVB(this.getGlobalY(),this._mode2ElementList[1].posVBAuto);
+        this.refreshDivAttribute(this._mode2ElementList[1],this._visible,x,y,this.getProperOpacity(data.opacity),data.scale,this._mode2Press,{ax:0.5,ay:0.5,ox:0,oy:0});
+    	this.updateInputMode2Calculate();
+    } else {
         this._padHalfWidth = padData.w*(0.5-this._xAnchor);
         this._padHalfHeight = padData.h*(0.5-this._yAnchor);
         this.refreshDivAttribute(this._mode2ElementList[1],this._visible,data.x,data.y,this.getProperOpacity(data.opacity),data.scale,this._mode2Press,{ax:0.5,ay:0.5,ox:this._padHalfWidth,oy:this._padHalfHeight});
-    } else {
-        this.refreshDivAttribute(this._mode2ElementList[1],this._visible,this._mode2X,this._mode2Y,this.getProperOpacity(data.opacity),data.scale,this._mode2Press,{ax:0.5,ay:0.5,ox:this._repairXMode2,oy:this._repairYMode2});
     }
 };
 Game_VB_Dir.prototype.updateInputMode2Calculate = function() {
+	if (!this._mode2Press) {
+        this.updateInputMode2(NaN);
+        return;
+	}
     let data = this._saveData;
     let graph = Graphics._realScale;
-    let ox = data.x-this._repairXMode2+this._padHalfWidth/graph;
-    let oy = data.y-this._repairYMode2+this._padHalfHeight/graph;
-    let x = this._mode2X;
-    let y = this._mode2Y;
+    let ox = data.x+this._padHalfWidth/graph;
+    let oy = data.y+this._padHalfHeight/graph;
+    let x = Graphics.pageToCanvasXVB(this.getGlobalX(),this._mode2ElementList[1].posVBAuto);
+    let y = Graphics.pageToCanvasYVB(this.getGlobalY(),this._mode2ElementList[1].posVBAuto);
     if (x===null||y===null) {
         this.updateInputMode2(NaN);
     } else if (x-ox===0&&this._mode2Y-oy===0) {
@@ -2722,81 +3092,82 @@ Game_VB_Dir.prototype.updateInputMode2 = function(ro) {
     if (this._dirImageSetting[2]["8Dir"]==="true") {
         let range = Math.PI/8;
         if (isNaN(ro)) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=false;
-            Input._currentState['right']=false;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',false);
         } else if (ro<range||ro>=range*15) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=false;
-            Input._currentState['right']=false;
-            Input._currentState['up']=true;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',true);
         } else if (ro>=range&&ro<range*3) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=false;
-            Input._currentState['right']=true;
-            Input._currentState['up']=true;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',true);
+		    Input.setPressVB('up',true);
         } else if (ro>=range*3&&ro<range*5) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=false;
-            Input._currentState['right']=true;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',true);
+		    Input.setPressVB('up',false);
         } else if (ro>=range*5&&ro<range*7) {
-            Input._currentState['down']=true;
-            Input._currentState['left']=false;
-            Input._currentState['right']=true;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',true);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',true);
+		    Input.setPressVB('up',false);
         } else if (ro>=range*7&&ro<range*9) {
-            Input._currentState['down']=true;
-            Input._currentState['left']=false;
-            Input._currentState['right']=false;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',true);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',false);
         } else if (ro>=range*9&&ro<range*11) {
-            Input._currentState['down']=true;
-            Input._currentState['left']=true;
-            Input._currentState['right']=false;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',true);
+		    Input.setPressVB('left',true);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',false);
         } else if (ro>=range*11&&ro<range*13) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=true;
-            Input._currentState['right']=false;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',true);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',false);
         } else if (ro>=range*13&&ro<range*15) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=true;
-            Input._currentState['right']=false;
-            Input._currentState['up']=true;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',true);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',true);
         }
     } else {
         let range = Math.PI/4;
         if (isNaN(ro)) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=false;
-            Input._currentState['right']=false;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',false);
         } else if (ro<range||ro>=range*7) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=false;
-            Input._currentState['right']=false;
-            Input._currentState['up']=true;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',true);
         } else if (ro>=range&&ro<range*3) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=false;
-            Input._currentState['right']=true;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',true);
+		    Input.setPressVB('up',false);
         } else if (ro>=range*3&&ro<range*5) {
-            Input._currentState['down']=true;
-            Input._currentState['left']=false;
-            Input._currentState['right']=false;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',true);
+		    Input.setPressVB('left',false);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',false);
         } else if (ro>=range*5&&ro<range*7) {
-            Input._currentState['down']=false;
-            Input._currentState['left']=true;
-            Input._currentState['right']=false;
-            Input._currentState['up']=false;
+		    Input.setPressVB('down',false);
+		    Input.setPressVB('left',true);
+		    Input.setPressVB('right',false);
+		    Input.setPressVB('up',false);
         }
     }
 };
+//=============================================================================
 Game_VB_Dir.prototype.isPressed = function() {
     switch(this._dirMode) {
     case 0:return this._mode0ElementPress ? !this._mode0ElementPress.every((s)=>(!s)) : false;
@@ -2903,7 +3274,7 @@ Scene_VBSetting.prototype.initialize = function() {
 Scene_VBSetting.prototype.clearVBData = function() {
     VB.settingMode = true;
     for (let i of VB.buttonList) {
-        i.clearAllPressData();
+        i.startSetting();
     }
 };
 Scene_VBSetting.prototype.create = function() {
@@ -2968,8 +3339,7 @@ Scene_VBSetting.prototype.commandResetAll = function() {
 Scene_VBSetting.prototype.popScene = function() {
     VB.settingMode = false;
     for (let i of VB.buttonList) {
-         i.clearAllSettingData();
-         i.confirmBaseSaveData();
+        i.endSetting();
     }
     ConfigManager.save();
     Scene_Base.prototype.popScene.apply(this,arguments);
@@ -3210,54 +3580,6 @@ Window_VBSettingSaveCommand.prototype.updateCursor = Window_VBSettingCommand.pro
 //=============================================================================
 //
 //=============================================================================
-Game_VB_Base.prototype.clearAllSettingData = function() {
-    this._isSetting = false;
-    this._settingPressCount = 0;
-    this._settingPressed = false;
-    this._shakingCount = 0;
-};
-Game_VB_Base.prototype.updateVBSettingMode = function(type,x,y) {
-    if (type===2) {
-        for (let i of VB.buttonList) {
-            i.clearAllSettingData();
-        }
-        this._isSetting = true;
-    } else if (type===0) {
-        this._settingPressed = true;
-    }
-};
-Game_VB_Base.prototype.updateSetting = function() {
-    if (this._isSetting) {
-        this._shakingCount++;
-        if (this._settingPressed) {
-            if (TouchInput.isPressed()) {
-                if (this._settingPressCount>10) {
-                    this._saveData.x = TouchInput.x;
-                    this._saveData.y = TouchInput.y;
-                } else if (this._settingPressCount>0) {
-                    this._settingPressCount++;
-                } else {
-                    this._settingPressCount = 1;
-                }
-            } else {
-                this._settingPressCount = 0;
-                this._settingPressed = false;
-            }
-        } else {
-            this._settingPressCount = 0;
-        }
-    }
-};
-Game_VB_Base.prototype.getProperOpacity = function(opacity) {
-    if (this._isSetting) {
-        let time = 40;
-        let turn = this._shakingCount%time;
-        let opacityRate = Math.abs(time/2-turn)/(time/2);
-        return Math.round(opacity*opacityRate);
-    } else {
-        return opacity;
-    }
-};
 //=============================================================================
 //
 //=============================================================================
