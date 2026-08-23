@@ -1964,6 +1964,7 @@ Game_VB_Base.prototype.initialize = function(buttonId) {
     this.loadShowSetting();
     this.loadFiles();
     this.loadCommonData();
+	this._textHideDelay = 0;
 };
 Game_VB_Base.prototype.loadButtonBaseSetting = function() {
     this._visible = true;
@@ -2297,7 +2298,19 @@ Game_VB_Base.prototype.isSceneVisible = function(vs) {
     }
 };
 Game_VB_Base.prototype.isTextHideVisible = function(vs) {
-    return vs.textHide?!$gameMessage.isBusy():true;
+    if (!vs.textHide) return true;
+    // 原逻辑：! $gameMessage.isBusy()
+    // 新逻辑：加一个延迟计数，文本消失后等 60 帧再允许显示
+    if ($gameMessage.isBusy()) {
+        this._textHideDelay = 60;  // 文本在显示，重置延迟计数器
+        return false;
+    } else {
+        if (this._textHideDelay > 0) {
+            this._textHideDelay--;
+            return false;  // 延迟期间继续隐藏，防止闪现
+        }
+        return true;
+    }
 };
 Game_VB_Base.prototype.isSwitchVisible = function(vs) {
     if (vs.switch === 0) {
