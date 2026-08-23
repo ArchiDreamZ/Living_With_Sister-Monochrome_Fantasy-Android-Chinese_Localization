@@ -1501,7 +1501,7 @@ document.addEventListener('touchmove', VB.syncGlobalXy);
 //
 //=============================================================================
 VB.buttonList = [];
-VB.controlVisible = true;
+VB.controlVisible = false;
 VB.settingMode = false;
 VB.pressButtonTemp = false;
 //=============================================================================
