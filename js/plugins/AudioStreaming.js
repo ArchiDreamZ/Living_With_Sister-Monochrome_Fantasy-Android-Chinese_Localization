@@ -115,7 +115,7 @@ if (function() {
             nw.App.argv[0].split('&').contains('test'));
 
     if (deleteM4a && isTest && Utils.isNwjs()) {
-        const exec = require('child_process').exec;
+        const execFile = require('child_process').execFile;
         let messages, success, failure;
         if (navigator.language.contains('ja')) {
             messages = [
@@ -135,11 +135,12 @@ if (function() {
             failure = 'Error occured while deleting m4a files.';
         }
         if (messages.every(message => confirm(message))) {
-            const command =
+            const file = process.platform === 'win32' ? 'cmd.exe' : 'find';
+            const args =
                 process.platform === 'win32'
-                    ? 'del /s *.m4a'
-                    : 'find . -name "*.m4a" -delete';
-            exec(command, error => alert(error ? failure : success));
+                    ? ['/c', 'del', '/s', '*.m4a']
+                    : ['.', '-name', '*.m4a', '-delete'];
+            execFile(file, args, error => alert(error ? failure : success));
         }
     }
 
